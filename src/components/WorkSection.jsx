@@ -132,7 +132,9 @@ const resetPosition = () => {
           viewport={{ once: true }}
           className="mb-5"
         >
-          <p className="text-uppercase mb-3" style={{ fontFamily: "'Lay Grotesk - Trial Black', sans-serif", fontSize: '24px' }}>
+          <p className="text-uppercase mb-3" style={{ fontFamily: "'Lay Grotesk - Trial Black', sans-serif", fontSize: '24px' ,marginLeft: '20px',
+            
+           }}>
             Selected Work
           </p>
         </motion.div>

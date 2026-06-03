@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "../serviceMobile.css";
+import service9 from "../../../assets/service9.mp4";
 function Name() {
   useEffect(() => {
     window.scrollTo({ top: window.innerHeight * 0.8, behavior: "smooth" });
@@ -44,7 +45,7 @@ function Name() {
         <div className="video-section">
           <div className="w-[500px] h-[200px] overflow-hidden rounded-xl shadow-lg bg-black relative">
             <video
-              src="https://framerusercontent.com/assets/OwOLGrA0k8eGBFJqXhNmfnXm784.mp4"
+              src={service9}
               autoPlay loop muted playsInline
               style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", top: 0, left: 0 }}
             />

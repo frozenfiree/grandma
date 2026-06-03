@@ -12,4 +12,8 @@ export default defineConfig({
       },
     },
   },
+  // Fixes 404 on refresh during `vite preview`
+  preview: {
+    historyApiFallback: true,
+  },
 })

@@ -17,8 +17,8 @@ function Name() {
     .marquee-text { font-size: 8vw; font-weight: 900; white-space: nowrap; padding-right: 5vw; color: black; overflow: visible; position: relative; z-index: 10; }
     @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
     .top-section {background-color:#ffffff; display: flex; width: 100%; }
-    .left { width: 65%; }
-    .left h1 { color: #000;font-size: 40px; font-weight: 900; text-transform: uppercase; line-height: 1.1; color: #000; padding-top: 150px; padding-left: 140px; letter-spacing: -1px; }
+    .left { width: 65%;  }
+    .left h1 { margin-top: 50px; color: #000;font-size: 40px; font-weight: 900; text-transform: uppercase; line-height: 1.1; color: #000; padding-top: 150px; padding-left: 140px; letter-spacing: -1px; }
     .visit { margin-top: 40px;margin-left: 90px; font-size: 24px; font-weight: 900; padding-left: 50px; text-transform: uppercase; cursor: pointer; }
     .visit:hover { text-decoration: underline; }
     .right { width: 30%; padding-top: 150px; padding-left: 100px; }
@@ -59,7 +59,7 @@ function Name() {
 
       <div className="top-section">
         <div className="left">
-          <h1>We help businesses define what they're building, who it's for, and how it gets to market. Every successful project starts with clear thinking, strong foundations, and a practical roadmap.</h1>
+          <h1>We help businesses define what they're building, who it's for, and how it gets to market.</h1>
           <div className="visit">lets chat →</div>
         </div>
         <div className="right">

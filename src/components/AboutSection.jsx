@@ -273,6 +273,7 @@ useEffect(() => {
           /* SECTION WRAPPER */
 .work-section {
   width: 100%;
+  margin-top: 120px;
  
 }
   
@@ -397,6 +398,7 @@ useEffect(() => {
   .work-subtitle {
     font-size: 13px;
   }
+    
 }
 
           
@@ -548,7 +550,7 @@ useEffect(() => {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       width: 100%;
-      margin-left: 90px;
+      margin-left: 0px;
       gap: 0;
     }
 
@@ -631,10 +633,13 @@ useEffect(() => {
             @media (max-width: 768px) {
               .marquee span {
                 font-size: 60px;
+                display: none;
+                
               }
 
               .about-subtext {
                 font-size: 20px;
+                margin-bottom:-120px;
               }
             }
           /* ─── EXTRA ABOUT SECTION ─── */

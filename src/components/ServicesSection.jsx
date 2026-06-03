@@ -1,22 +1,32 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const services = [
   {
     title: 'PLAN ',
+    serviceId: 5,
     items: ['Information architecture', 'Zone maps and wireframes', 'Content architecture', 'User journeys', 'Product validation']
   },
   {
     title: 'BUILD',
+    serviceId: 2,
     items: ['UX flows', 'Design toolkits', 'Web and app design', 'Motion and interaction', 'Design systems']
   },
   {
     title: 'DISTRIBUTE',
+    serviceId: 9,
     items: ['Product architecture', 'Front and back-end development', 'Development infrastructure', 'CI/CD pipelines', 'QA automation and visual testing']
   }
 ];
 
 const ServicesSection = () => {
+  const navigate = useNavigate();
+
+  const handleServiceClick = (serviceId) => {
+    navigate(`/services/${serviceId}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <section id="services" className="ss-section">
       <div className="ss-inner">
@@ -47,7 +57,13 @@ const ServicesSection = () => {
               <h4 className="ss-col-heading">{service.title}</h4>
               <ul className="ss-list">
                 {service.items.map((item, idx) => (
-                  <li key={idx} className="ss-list-item"><span>{item}</span></li>
+                  <li 
+                    key={idx} 
+                    className="ss-list-item"
+                    onClick={() => handleServiceClick(service.serviceId)}
+                  >
+                    <span>{item}</span>
+                  </li>
                 ))}
               </ul>
             </motion.div>
@@ -134,6 +150,12 @@ const ServicesSection = () => {
           overflow: hidden;
           padding-left: 10px;
           padding-right: 10px;
+          user-select: none;
+          transition: transform 0.2s ease;
+        }
+
+        .ss-list-item:hover {
+          transform: translateX(4px);
         }
 
         .ss-list-item::before {

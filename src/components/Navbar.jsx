@@ -158,15 +158,10 @@ const navHoverColor = (isScrolled || isServicePage)
           width: '100%',
           maxWidth: '100%',
           margin: '0 auto',
-          padding: '14px 24px',
+          padding: '1px 20px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          background: isScrolled ? 'rgba(255,255,255,0.92)' : 'transparent',
-          backdropFilter: isScrolled ? 'blur(14px)' : 'none',
-          WebkitBackdropFilter: isScrolled ? 'blur(14px)' : 'none',
-          boxShadow: isScrolled ? '0 10px 40px rgba(0, 0, 0, 0.08)' : 'none',
-          border: isScrolled ? '1px solid rgba(0, 0, 0, 0.06)' : '1px solid transparent',
           borderRadius: '1px',
           transition: 'all 0.35s cubic-bezier(0.4,0,0.2,1)',
         }}
@@ -207,7 +202,7 @@ const navHoverColor = (isScrolled || isServicePage)
           <ul className="navbar-nav gap-3 align-items-center">
             {navTabs.map((item, tabIndex) => (
               <li
-                className="nav-item position-relative"
+                className={`nav-item position-relative${item === 'SERVICES' ? ' services-nav-item' : ''}`}
                 key={item}
                 ref={item === 'SERVICES' ? dropdownRef : null}
               >
@@ -344,6 +339,21 @@ const navHoverColor = (isScrolled || isServicePage)
           justify-content: space-between;
         }
 
+        /* Desktop background — scrolled state */
+        .app-navbar.scrolled .navbar-inner {
+          background: rgba(255,255,255,0.92);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+          border: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .app-navbar:not(.scrolled) .navbar-inner {
+          background: transparent;
+          box-shadow: none;
+          border: 1px solid transparent;
+        }
+
         .app-navbar .navbar-nav .nav-item {
           display: flex;
           align-items: center;
@@ -351,7 +361,7 @@ const navHoverColor = (isScrolled || isServicePage)
         }
 
         .logo-hover {
-          padding: 6px 12px;
+          padding: 6px 5px;
           border: 1px solid transparent;
           border-radius: 6px;
           transition: all 0.25s ease;
@@ -573,7 +583,6 @@ const navHoverColor = (isScrolled || isServicePage)
           .service-name-home { font-size: 12px !important; }
         }
 
-        /* ── Mobile ── */
         @media (max-width: 991px) {
           .app-navbar .navbar-inner {
             border-radius: 12px !important;
@@ -615,6 +624,84 @@ const navHoverColor = (isScrolled || isServicePage)
           }
 
           .service-item span:first-child {
+            font-size: 12px !important;
+          }
+        }
+
+        /* ── Mobile: always white navbar bar ── */
+        @media (max-width: 768px) {
+          .app-navbar .navbar-inner,
+          .app-navbar.scrolled .navbar-inner,
+          .app-navbar:not(.scrolled) .navbar-inner {
+            background: rgba(255,255,255,0.97) !important;
+            backdrop-filter: blur(14px) !important;
+            -webkit-backdrop-filter: blur(14px) !important;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08) !important;
+            border: 1px solid rgba(0,0,0,0.06) !important;
+            border-radius: 12px !important;
+          }
+
+          .app-navbar .navbar-brand {
+            color: #000000 !important;
+          }
+
+          .app-navbar .navbar-toggler {
+            background-color: #f0f0f0 !important;
+          }
+        }
+
+        /* ── Mobile responsive: 768px and below ── */
+        @media (max-width: 768px) {
+          /* Make the SERVICES nav-item a column so submenu stacks below */
+          .app-navbar .navbar-nav .nav-item.services-nav-item {
+            flex-direction: column !important;
+            // align-items: stretch !important;
+            width: 100% !important;
+          }
+
+          .services-dropdown,
+          .services-dropdown-home {
+            position: static !important;
+            width: 70% !important;
+           
+            box-shadow: none;
+            border: 1px solid rgba(0,0,0,0.08);
+            // margin-top: 12px;
+            // padding: 8px 0;
+            overflow: hidden;
+          }
+
+          @keyframes mobileSlideDown {
+            from { opacity: 0; max-height: 0; }
+            to   { opacity: 1; max-height: 500px; }
+          }
+
+          .services-grid,
+          .services-grid-home {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 0 !important;
+            grid-template-columns: unset !important;
+          }
+
+          .service-item,
+          .service-item-home {
+            width: 100% !important;
+            padding: 14px 16px !important;
+            border-radius: 4px;
+            margin: 4px 0;
+           
+          }
+
+          .service-item span:first-child,
+          .service-name-home {
+            font-size: 13px !important;
+            font-weight: 700 !important;
+          }
+
+          .service-arrow,
+          .service-arrow-home {
+            margin-left: auto;
             font-size: 12px !important;
           }
         }
