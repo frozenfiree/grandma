@@ -1,0 +1,107 @@
+/* contact.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+}
+
+body {
+  background: #ffffff;
+  color: #111;
+}
+
+.container {
+  padding: 40px 60px;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+
+
+/* MAIN LAYOUT */
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* LEFT SIDE */
+.left {
+  width: 50%;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: black;
+  margin-bottom: 30px;
+}
+
+.left h1 {
+  font-size: 140px;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -2px;
+  margin-top:160px;
+  margin-left:-90px;
+}
+
+.left p {
+  margin-top: 30px;
+  font-size: 22px;
+  max-width: 500px;
+  line-height: 1.5;
+  margin-left:-90px;
+
+}
+
+/* RIGHT SIDE */
+.right {
+  width: 40%;
+  margin-top: 150px;
+}
+
+.field {
+  margin-bottom: 40px;
+}
+
+.field label {
+  display: block;
+  font-size: 30px;
+  font-weight: 800;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  font-size: 18px;
+  background: transparent;
+  outline: none;
+}
+
+.field textarea {
+  resize: none;
+}
