@@ -204,7 +204,6 @@ useEffect(() => {
       {/* Mobile instruction text */}
       {isTouchDevice && (
         <div className="mobile-instruction">
-          👆 Touch and drag on the screen above to see images
         </div>
       )}
 
