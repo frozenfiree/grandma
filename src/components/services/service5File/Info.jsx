@@ -22,8 +22,14 @@ export default function Info() {
         * { margin: 0; box-sizing: border-box; }
         html, body { margin: 0; padding: 0; overflow-x: hidden; scrollbar-width: none; }
         body::-webkit-scrollbar { display: none; }
+.info-video-section {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+
         .container {background-color:#ffffff; width: 100% !important; max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
-        .video-section { width: 100%; height: 140vh; margin-top: 0; position: relative; }
+        .video-section { width: 100%; height: 100vh; margin-top: 0; position: relative; }
         .video-section video { width: 100%; height: 100%; object-fit: cover; }
         .accordion-container {background-color:#ffffff; margin-top: 80px; padding-right: 500px; }
         .accordion-item { border-top: 1px solid #999; padding: 40px 0; }
@@ -51,7 +57,7 @@ export default function Info() {
         }
       `}</style>
 
-      <div className="video-section">
+      <div className="info-video-section">
         <div className="media-row">
           <div className="media-box">
             <video src="https://framerusercontent.com/assets/NzaVFCeAegy4h4hOOLAL9TtM8Q.mp4" autoPlay loop muted playsInline />

@@ -155,6 +155,7 @@ body::-webkit-scrollbar {
     padding-left: 20px;
     margin-left: 2px;
     line-height: 1.2;
+    margin-top: 30px;
   }
 
   .visit {
@@ -162,6 +163,7 @@ body::-webkit-scrollbar {
     padding: 0;
     padding-left: 20px;
     margin-top: 20px;
+    margin-left: 0;
   }
 
   .right {

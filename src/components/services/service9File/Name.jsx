@@ -9,36 +9,204 @@ function Name() {
   return (
     <div style={{ overflowX: "hidden", position: "relative" }}>
       <style>{`
-    .video-section { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: visible; background: #ffffff; position: relative; z-index: 10; }
-    html, body { overflow-x: hidden; scrollbar-width: none; }
-    body::-webkit-scrollbar { display: none; }
-    .scene { position: relative; min-height: 100vh; width: 100%; overflow: visible; }
-    .marquee-wrapper { position: absolute; left: 0; top: 100%; transform: translateY(-50%); width: 100%; z-index: 100; overflow: visible; }
-    .marquee-track { display: flex; width: max-content; animation: scroll 10s linear infinite; overflow: visible; }
-    .marquee-text { font-size: 8vw; font-weight: 900; white-space: nowrap; padding-right: 5vw; color: black; overflow: visible; position: relative; z-index: 10; }
-    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .top-section { display: flex; width: 100%; }
-    .left { width: 65%; }
-    .left h1 { font-size: 40px; font-weight: 900; text-transform: uppercase; line-height: 1.1; color: #000; padding-top: 150px; padding-left: 140px; letter-spacing: -1px; }
-    .visit { margin-top:40px; margin-left:90px; font-size: 24px; font-weight: 900; padding-left: 50px; text-transform: uppercase; cursor: pointer; }
-    .visit:hover { text-decoration: underline; }
-    .right { width: 30%; padding-top: 150px; padding-left: 100px; }
-    .block { margin-bottom: 50px; }
-    .block h3 { font-size: 20px; font-weight: 900; text-transform: uppercase; margin: 0;color: #000000; }
-    .block p { font-size: 22px; color: #000000;font-weight: 900; }
-    @media (max-width: 900px) {
-      .top-section { flex-direction: column; padding-left: 10px; }
-      .left, .right { width: 100%; padding: 0; }
-        .left h1 { margin-left:1px;font-size: 32px; padding: 0; line-height: 1.2; }
+   .video-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible; /* allows marquee to extend */
+  background: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+html, body {
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+}
 
-      .visit { font-size: 18px; padding: 0; margin-top: 20px; }
-      .right { margin-top: 30px; padding-left: 0; }
-      .block { margin-bottom: 25px; }
-      .block h3 { font-size: 16px; }
-      .block p { font-size: 14px; }
-      .video-section { height: 70vh; }
-      .marquee-text { font-size: 12vw; }
-    }
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.scene {
+  position: relative;
+
+  min-height: 100vh;  /* ✅ better than height */
+  width: 100%;
+
+  overflow: visible;
+}
+.marquee-wrapper {
+  position: absolute;
+  left: 0;
+  top: 100%;              /* video ke bottom pe le jao */
+  transform: translateY(-50%);  /* half upar kheecho */
+  width: 100%;
+  z-index: 100;
+  overflow:visible; /* text ke overflow ko allow karo */
+}
+  .marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 10s linear infinite;
+   overflow:visible; /* text ke overflow ko allow karo */
+
+}
+  
+       .marquee-text {
+  font-size: 8vw;
+  font-weight: 900;
+  white-space: nowrap;
+  padding-right: 5vw;
+  color: black;
+   overflow:visible; /* text ke overflow ko allow karo */
+
+  position: relative;
+  z-index: 10;
+
+ 
+}
+
+@keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+          .top-section {
+          display: flex;
+          width: 100%;
+        }
+          .accordion-item:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+        .left {
+          width: 65%;
+        }
+
+        .left h1 {
+          font-size: 40px;
+          font-weight: 900;
+          text-transform: uppercase;
+          line-height: 1.1;
+          color: #000;
+          padding-top: 100px;
+          padding-left:140px;
+          letter-spacing: -1px;
+          margin-top: 50px;
+        }
+
+        
+
+        .visit {
+        
+          margin-top: 40px;
+          font-size: 24px;
+          font-weight: 900;
+          padding-left:50px;
+            margin-left: 90px;
+          text-transform: uppercase;
+          cursor: pointer;
+        }
+
+        .visit:hover {
+          text-decoration: underline;
+        }
+
+        .right {
+          width: 30%;
+
+          padding-top: 150px;
+          padding-left: 100px;
+        }
+
+        .block {
+          margin-bottom: 50px;
+        }
+
+        .block h3 {
+          font-size: 29px;
+          font-weight: 900;
+          text-transform: uppercase;
+          margin: 0;
+        }
+
+        .block p {
+          font-size: 18px;
+          margin-top: 8px;
+          color: #555;
+        }
+
+        @media (max-width: 900px) {
+
+        
+  /* 🔥 STACK LEFT + RIGHT */
+  .top-section {
+    flex-direction: column;
+    padding-left: 10px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* 🔥 FIX TEXT SIZE */
+  .left h1 {
+    font-size: 32px;
+    padding: 0;
+    line-height: 1.2;
+    margin-left:1px;
+
+  }
+
+  .visit {
+    font-size: 18px;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  /* 🔥 RIGHT SECTION CLEAN STACK */
+  .right {
+    margin-top: 30px;
+    padding-left: 0;
+  }
+
+  .block {
+    margin-bottom: 25px;
+  }
+
+  .block h3 {
+    font-size: 16px;
+  }
+
+  .block p {
+    font-size: 14px;
+  
+  }
+
+  /* 🔥 VIDEO FIX */
+  .video-section {
+    height: 70vh;
+  }
+
+  .video-section .w-\\[500px\\] {
+    width: 100% !important;
+    height: 200px !important;
+  }
+
+  /* 🔥 MARQUEE TEXT SIZE */
+  .marquee-text {
+    font-size: 12vw;
+  }
+
+}
       `}</style>
 
       <div className="scene">
@@ -71,7 +239,7 @@ Audience Targeting
 Distribution Strategy
 Reporting & Analytics
 Performance Optimisation</p></div>
-          <div className="block"><h3>Year</h3><p>2026</p></div>
+          <div className="block blockmobile"><h3>Year</h3><p>2026</p></div>
         </div>
       </div>
     </div>

@@ -28,348 +28,49 @@ export default function Info() {
 
       <style>{`
 
-       *{
-         margin:0;
-         box-sizing:border-box;
-         }
-
-         html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-  /* 🔥 DESKTOP GRID (FIX THIS) */
-.grid-section {
+        * { margin: 0; box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; overflow-x: hidden; scrollbar-width: none; }
+        body::-webkit-scrollbar { display: none; }
+.info-video-section {
   width: 100%;
-  padding: 80px 20px;
-  box-sizing: border-box;
-}
-
-.grid-row {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
-  
-}
-
-.grid-item {
-  flex: 1;
-  height: 450px;
-  overflow: hidden;
-  background: #000;
-  display: flex;
-}
-
-/* Make media behave perfectly */
-.grid-item img,
-.grid-item video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-        
-        /* 🔥 VIDEO SECTION BELOW CONTENT */
-        .video-section {
-  width: 100%;
-  height: 140vh;
-  margin-top: 0;   /* remove gap */
+  height: fit-content;
   position: relative;
 }
 
-        .video-section video {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+        .container {background-color:#ffffff; width: 100% !important; max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+        .video-section { width: 100%; height: 100vh; margin-top: 0; position: relative; }
+        .video-section video { width: 100%; height: 100%; object-fit: cover; }
+        .accordion-container {background-color:#ffffff; margin-top: 80px; padding-right: 500px; }
+        .accordion-item { border-top: 1px solid #999; padding: 40px 0; }
+        .accordion-header { display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .accordion-title { font-size: 28px; font-weight: 800; letter-spacing: -1px; padding-left: 20px; margin: 0; transition: color 0.3s ease; }
+        .accordion-title.active { color: #000; }
+        .toggle-btn { width: 70px; height: 70px; background: #dfff00; display: flex; align-items: center; justify-content: center; font-size: 40px; font-weight: bold; transition: all 0.3s ease; }
+        .accordion-content { display: none; padding-right: 50px; }
+        .accordion-content.show { display: block; }
+        .accordion-content p { font-size: 24px; line-height: 1.7; font-weight: 700; padding-left: 20px; }
+        .media-row { display: flex; width: 100%; height: 700px; gap: 20px; padding: 20px; }
+        .media-box { flex: 1; height: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .media-box video, .media-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .link-box { background: #dbff00; }
+        .media-link { font-size: 24px; font-weight: 900; color: #000; text-decoration: none; text-transform: uppercase; transition: all 0.3s ease; }
+        .media-link:hover { transform: translateX(10px); }
+        @media (max-width: 900px) {
+          .accordion-container { padding: 0 20px; }
+          .accordion-title { font-size: 28px; padding-left: 20px; }
+          .toggle-btn { width: 50px; height: 50px; font-size: 28px; }
+          .accordion-content p { font-size: 24px; line-height: 1.7; font-weight: 400; }
+          .media-row { flex-direction: column; height: auto; gap: 15px; padding: 15px; }
+          .media-box { height: 300px; }
+          .video-section { height: 100vh; }
         }
-
-     
-          body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #ffffff;
-}
-
-.container {
-  width: 100% !important;
-  max-width: 100% !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.accordion-content {
-  display: none;
-  padding-right:50px;
-}
-
-/* Divider line */
-.accordion-item {
-  border-top: 1px solid #999;
-  padding: 40px 0;
-}
-
-.accordion-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-
-/* Title */
-.accordion-title {
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: -1px;
-  padding-left:20px;
-  
-  margin: 0;
-  transition: color 0.3s ease;
-}
-
-.accordion-title.active {
-  color: #000;
-}
-
-/* Toggle Button */
-.toggle-btn {
-  width: 70px;
-  height: 70px;
-  background: #dfff00; /* neon yellow */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 40px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.toggle-btn.open {
-  transform: rotate(0deg);
-}
-
-/* Content */
-.accordion-content p {
-  font-size: 24px;
-  line-height: 1.7;
-  font-weight: 700;
-  padding-left:20px;
-}
-
-.media-section {
-  width: 100%;
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-  margin-top: 80px;
-  box-sizing: border-box;
-}
-
-.box {
-  flex: 1;
-  height: 350px;
-  border-radius: 1px;
-  overflow: hidden;
-  background: #000;
-}
-
-.box video,
-.box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;  /* remove horizontal scroll */
-  scrollbar-width: none; /* Firefox */
-}
-  .accordion-container{
-  margin-top:80px;
-  padding-right:500px;}
-
-body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
-.media-row {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  gap: 0;              /* ❌ remove gap */
-  padding: 0;          /* ❌ remove padding */
-}
-
-.accordion-content.show {
-  display: block;
-}
-.media-box {
-  flex: 1;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 0;
-  padding: 10px;
-
-  background: #fff;   /* ✅ change from black to white */
-}
-
-/* Perfect scaling */
-.media-box video,
-.media-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-  .media-row {
-  display: flex;
-  width: 100%;
-  height: 700px;   /* 🔥 increase row height */
-  gap: 20px;
-  padding: 20px;
-}
-
-.media-box {
-  flex: 1;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* 🔥 LINK BOX STYLE */
-.link-box {
-  background: #dbff00;   /* neon */
-}
-
-.media-link {
-  font-size: 24px;
-  font-weight: 900;
-  color: #000;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-
-.media-link:hover {
-  transform: translateX(10px);
-}
-/* mobile */
-@media (max-width: 900px) {
-
-  /* 🔥 Accordion fix */
-  .accordion-container {
-    padding: 0 20px;   /* remove that 350px push */
-    
-  }
-
-
-
- .accordion-title {
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: -1px;
-  padding-left:20px;
-  
-  margin: 0;
-  transition: color 0.3s ease;
-}
-  
-
-
-  .toggle-btn {
-    width: 50px;
-    height: 50px;
-    font-size: 28px;
-  }
-
-  .accordion-content p {
-  font-size: 24px;
-  line-height: 1.7;
-  font-weight: 400;
-}
-
-.grid-item {
-  flex: 1;
-  height: 400px;
-  overflow: hidden;
-  background: #000;
-  display: flex;          /* 🔥 FIX */
-}
-
-/* 🔥 Force both image & video to behave same */
-.grid-item img,
-.grid-item video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-  /* 🔥 Media section (3 boxes → vertical) */
-  .media-section {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px;
-  }
-    
-    
-  .top-section {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-padding: 20px;
-  }
-
-
-  .box {
-    width: 100%;
-    height: 250px;
-  }
-
-  /* 🔥 Drop-down videos */
-  .drop-down-video {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .drop-down-video video {
-    height: 250px !important;
-  }
-
-  /* 🔥 Grid section (MOST IMPORTANT) */
-  .grid-row {
-    flex-direction: column;   /* stack vertically */
-    gap: 15px;
-    padding: 40px 15px;
-  }
-
- .grid-item {
-  flex: 1;
-  height: 400px;   /* same height for all */
-  overflow: hidden;
-  background: #000;
-}
-
-/* remove tall effect on desktop */
-.grid-item.tall {
-  height: 400px;
-}
-  /* 🔥 Video section */
-  .video-section {
-    height: 100vh;
-  }
-
-}
       `}</style>
 
       {/* 🔥 TOP CONTENT */}
      
 
       {/* 🔥 PLANE VIDEO BELOW CONTENT */}
-      <div className="video-section">
+      <div className="info-video-section">
   <div className="media-row">
     
     {/* VIDEO */}

@@ -98,6 +98,7 @@ body::-webkit-scrollbar {
           padding-top: 100px;
           padding-left:140px;
           letter-spacing: -1px;
+          margin-top: 50px;
         }
 
         
@@ -168,6 +169,7 @@ body::-webkit-scrollbar {
     font-size: 18px;
     padding: 0;
     margin-top: 20px;
+    margin-left: 0;
   }
 
   /* 🔥 RIGHT SECTION CLEAN STACK */

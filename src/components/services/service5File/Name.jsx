@@ -8,36 +8,202 @@ function Name() {
   return (
     <div style={{ overflowX: "hidden", position: "relative" }}>
       <style>{`
-    .video-section { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: visible; background: #ffffff; position: relative; z-index: 10; }
-    html, body { overflow-x: hidden; scrollbar-width: none; }
-    body::-webkit-scrollbar { display: none; }
-    .scene { position: relative; min-height: 100vh; width: 100%; overflow: visible; }
-    .marquee-wrapper { position: absolute; left: 0; top: 100%; transform: translateY(-50%); width: 100%; z-index: 100; overflow: visible; }
-    .marquee-track { display: flex; width: max-content; animation: scroll 10s linear infinite; overflow: visible; }
-    .marquee-text { font-size: 8vw; font-weight: 900; white-space: nowrap; padding-right: 5vw; color: black; overflow: visible; position: relative; z-index: 10; }
-    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .top-section {background-color:#ffffff; display: flex; width: 100%; }
-    .left { width: 65%;  }
-    .left h1 { margin-top: 50px; color: #000;font-size: 40px; font-weight: 900; text-transform: uppercase; line-height: 1.1; color: #000; padding-top: 150px; padding-left: 140px; letter-spacing: -1px; }
-    .visit { margin-top: 40px;margin-left: 90px; font-size: 24px; font-weight: 900; padding-left: 50px; text-transform: uppercase; cursor: pointer; }
-    .visit:hover { text-decoration: underline; }
-    .right { width: 30%; padding-top: 150px; padding-left: 100px; }
-    .block { margin-bottom: 50px; }
-    .block h3 { font-size: 29px; font-weight: 900; text-transform: uppercase; margin: 0; }
-    .block p { font-size: 18px; margin-top: 8px; color: #555; }
-    @media (max-width: 900px) {
-      .top-section { flex-direction: column; padding-left: 10px; }
-      .left, .right { width: 100%; padding: 0; }
-        .left h1 { margin-left:1px;font-size: 32px; padding: 0; line-height: 1.2; }
+   .video-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  background: #fff;
+  position: relative;
+  z-index: 10;
+}
 
-      .visit { font-size: 18px; padding: 0; margin-top: 20px; }
-      .right { margin-top: 30px; padding-left: 0; }
-      .block { color: #000;margin-bottom: 25px; }
-      .block h3 {color: #000; font-size: 16px; }
-      .block p { font-size: 14px; }
-      .video-section { height: 70vh; }
-      .marquee-text { font-size: 12vw; }
-    }
+html,
+body {
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+/* KEEPING MARQUEE POSITION AS IT IS */
+.marquee-wrapper {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 100;
+  overflow: visible;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 10s linear infinite;
+}
+
+.marquee-text {
+  font-size: 8vw;
+  font-weight: 900;
+  white-space: nowrap;
+  padding-right: 5vw;
+  color: #000;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* TOP SECTION */
+
+.top-section {
+  display: flex;
+  width: 100%;
+  background: #fff;
+}
+
+.left {
+  width: 65%;
+}
+
+.left h1 {
+  margin-top: 50px;
+  padding-top: 100px;
+  padding-left: 140px;
+
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.visit {
+  margin-top: 40px;
+  margin-left: 90px;
+  padding-left: 50px;
+
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.right {
+  width: 30%;
+  padding-top: 150px;
+  padding-left: 100px;
+}
+
+.block {
+  margin-bottom: 50px;
+}
+
+.block h3 {
+  margin: 0;
+  font-size: 29px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.block p {
+  margin-top: 8px;
+  font-size: 18px;
+  color: #555;
+  white-space: pre-line;
+}
+/* TABLET */
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 900px) {
+  .top-section {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .left h1 {
+    margin-top: 30px;
+    padding: 0;
+
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .visit {
+    margin: 20px 0 0;
+    padding: 0;
+    font-size: 18px;
+  }
+
+  .right {
+    margin-top: 30px;
+  }
+
+  .block {
+    margin-bottom: 30px;
+  }
+
+  .block h3 {
+    font-size: 16px;
+  }
+
+  .block p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .marquee-text {
+    font-size: 12vw;
+  }
+
+  .video-section {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .left h1 {
+    font-size: 24px;
+  }
+
+  .visit {
+    font-size: 16px;
+  }
+
+  .block h3 {
+    font-size: 15px;
+  }
+
+  .block p {
+    font-size: 13px;
+  }
+}
+}
       `}</style>
 
       <div className="scene">
