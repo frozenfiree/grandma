@@ -1,6 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { ROUTES } from '../routes';
+
+const SERVICE_ID_TO_ROUTE = {
+  2: ROUTES.SERVICE_2,
+  5: ROUTES.SERVICE_5,
+  9: ROUTES.SERVICE_9,
+};
 
 const services = [
   {
@@ -24,7 +31,7 @@ const ServicesSection = () => {
   const navigate = useNavigate();
 
   const handleServiceClick = (serviceId) => {
-    navigate(`/services/${serviceId}`);
+    navigate(SERVICE_ID_TO_ROUTE[serviceId] || ROUTES.SERVICES);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   return (

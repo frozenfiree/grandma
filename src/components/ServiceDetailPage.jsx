@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Spinner } from 'react-bootstrap';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
+import { ROUTES } from '../routes';
 
 const ServiceDetailPage = () => {
   const location = useLocation();
@@ -183,12 +184,19 @@ const ServiceDetailPage = () => {
       setRelatedServices(randomRelated);
       setLoading(false);
     } else {
-      navigate('/services');
+      navigate(ROUTES.SERVICES);
     }
   }, [location, navigate]);
 
+  const SERVICE_ROUTES = {
+    1: ROUTES.SERVICE_1, 2: ROUTES.SERVICE_2, 3: ROUTES.SERVICE_3,
+    4: ROUTES.SERVICE_4, 5: ROUTES.SERVICE_5, 6: ROUTES.SERVICE_6,
+    7: ROUTES.SERVICE_7, 8: ROUTES.SERVICE_8, 9: ROUTES.SERVICE_9,
+    10: ROUTES.SERVICE_10,
+  };
+
   const handleRelatedServiceClick = (relatedService) => {
-    navigate(`/services/${relatedService.id}`, { state: { service: relatedService } });
+    navigate(SERVICE_ROUTES[relatedService.id] || ROUTES.SERVICES, { state: { service: relatedService } });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -310,7 +318,7 @@ const ServiceDetailPage = () => {
                   transition={{ delay: 0.6, duration: 0.6 }}
                 >
                   <motion.button
-                    onClick={() => navigate('/services')}
+                    onClick={() => navigate(ROUTES.SERVICES)}
                     style={{
                       background: 'transparent',
                       border: `2px solid ${service.color}`,
@@ -329,7 +337,7 @@ const ServiceDetailPage = () => {
                   </motion.button>
                   
                   <motion.button
-                    onClick={() => navigate('/contact')}
+                    onClick={() => navigate(ROUTES.CONTACT)}
                     style={{
                       background: service.color,
                       border: 'none',
@@ -858,7 +866,7 @@ const ServiceDetailPage = () => {
             </motion.p>
             
             <motion.button
-              onClick={() => navigate('/contact')}
+              onClick={() => navigate(ROUTES.CONTACT)}
               style={{
                 background: service.color,
                 color: '#000',

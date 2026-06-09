@@ -4,6 +4,7 @@ import WorkCard from './WorkCard';
 import UIUX2 from "../assets/UIUX2.mp4";
 import MortionGrandma from "../assets/3dMortionGrandma.mp4";
 import Home1 from "../assets/Home1.mp4";
+import { ROUTES } from '../routes';
 
 const workItems = [
   {
@@ -12,7 +13,7 @@ const workItems = [
   description: 'Intuitive digital experiences crafted with user-centered design',
   category: 'Marketing Website & Ecommerce',
   video: UIUX2,
-  link: '/work/fantom'
+  link: ROUTES.WORK_FANTOM
 },
   {
   id: 2,
@@ -21,7 +22,7 @@ const workItems = [
   category: 'Marketing Website',
   video:MortionGrandma ,
   
-  link: '/work/wing'
+  link: ROUTES.WORK_WING
 },
 
 {
@@ -30,7 +31,7 @@ const workItems = [
   description: 'Strategic digital solutions built to elevate brand growth',
   category: 'Marketing Website',
   video: Home1,
-  link: '/work/swisher'
+  link: ROUTES.WORK_SWISHER
 }
 ];
 

@@ -207,7 +207,7 @@ useEffect(() => {
       Are you ready <br /> to take action?
     </h2>
        
-    <a href="/contact" style={{ textDecoration: "none" }}>
+    <a href="/c9r2y5k" style={{ textDecoration: "none" }}>
   <h1 className="cta-big">
     LET’S CHAT.
   </h1>

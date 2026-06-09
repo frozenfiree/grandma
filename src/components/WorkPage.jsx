@@ -5,6 +5,7 @@
   import MortionGrandma from '../assets/3dMortionGrandma.mp4';
   import Home1 from '../assets/Home1.mp4';
   import podcast from '../assets/podcast.mp4';
+  import { ROUTES } from '../routes';
 
   const workItems = [
     {
@@ -13,10 +14,10 @@
   description: 'A powerful CRM platform that helps businesses manage customer relationships, streamline sales pipelines, automate workflows, and drive growth through actionable insights.',
   category: 'CRM Platform',
   video: 'https://framerusercontent.com/assets/hQUXKbpvYZyElXRxbNmW95ph8Q.mp4',
-  link: '/services/1'
+  link: ROUTES.SERVICE_1
 },
-    { id: 2, title: 'TECH PUBLICATION',     description: 'Five vertical newsrooms , MarTech, FinTech, HRTech, CyberTech, SalesTech',    category: 'MEDIA NETWORK',            video: MortionGrandma, link: '/work/wing'    },
-    { id: 3, title: 'THE PODCAST',  description: 'Our stuido is warming up. Launching soon!',         category: 'COMING SOON',            video: podcast,          link: '/work/swisher' },
+    { id: 2, title: 'TECH PUBLICATION',     description: 'Five vertical newsrooms , MarTech, FinTech, HRTech, CyberTech, SalesTech',    category: 'MEDIA NETWORK',            video: MortionGrandma, link: ROUTES.WORK_WING    },
+    { id: 3, title: 'THE PODCAST',  description: 'Our stuido is warming up. Launching soon!',         category: 'COMING SOON',            video: podcast,          link: ROUTES.WORK_SWISHER },
   ];
 
   // ─── WorkPage ─────────────────────────────────────────────────────────────────

@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ROUTES } from '../routes';
 import { Container, Row, Col, Badge } from 'react-bootstrap';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -504,8 +505,15 @@ const ServicesPage = () => {
     }
   ];
 
+  const SERVICE_ROUTES = {
+    1: ROUTES.SERVICE_1, 2: ROUTES.SERVICE_2, 3: ROUTES.SERVICE_3,
+    4: ROUTES.SERVICE_4, 5: ROUTES.SERVICE_5, 6: ROUTES.SERVICE_6,
+    7: ROUTES.SERVICE_7, 8: ROUTES.SERVICE_8, 9: ROUTES.SERVICE_9,
+    10: ROUTES.SERVICE_10,
+  };
+
   const handleServiceClick = (service) => {
-    navigate(`/services/${service.id}`, { state: { service } });
+    navigate(SERVICE_ROUTES[service.id] || ROUTES.SERVICES, { state: { service } });
   };
 
   return (
@@ -590,7 +598,7 @@ const ServicesPage = () => {
             
             <motion.button
               className="btn-lime-glow"
-              onClick={() => navigate('/contact')}
+              onClick={() => navigate(ROUTES.CONTACT)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               style={{

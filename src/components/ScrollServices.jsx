@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TextCounter from "./TextCounter";
+import { ROUTES } from '../routes';
 import {
   motion,
   useScroll,
@@ -9,6 +10,13 @@ import {
   useMotionValueEvent,
   useSpring,
 } from "framer-motion";
+
+const SERVICE_ROUTES_BY_ID = {
+  1: ROUTES.SERVICE_1, 2: ROUTES.SERVICE_2, 3: ROUTES.SERVICE_3,
+  4: ROUTES.SERVICE_4, 5: ROUTES.SERVICE_5, 6: ROUTES.SERVICE_6,
+  7: ROUTES.SERVICE_7, 8: ROUTES.SERVICE_8, 9: ROUTES.SERVICE_9,
+  10: ROUTES.SERVICE_10,
+};
 
 export default function ScrollServices({ services }) {
   const sectionRef = useRef(null);
@@ -161,25 +169,8 @@ export default function ScrollServices({ services }) {
                 {services[activeIndex].shortDesc}
               </p>
 
-              {/* <motion.button
-                onClick={() => navigate(`/services/${services[activeIndex].id}`)}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                style={{
-                  background: "transparent",
-                  border: `fff solid 2px`,
-                  color: "#fff",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                  padding: "12px 32px",
-                 fontSize: "16px",
-                  marginTop: "10px",
-                }}
-              >
-                Learn More →
-              </motion.button> */}
               <motion.button
-  onClick={() => navigate(`/services/${services[activeIndex].id}`)}
+  onClick={() => navigate(SERVICE_ROUTES_BY_ID[services[activeIndex].id] || ROUTES.SERVICES)}
   whileTap={{ scale: 0.95 }}
   style={{
     position: "relative",
@@ -194,11 +185,6 @@ export default function ScrollServices({ services }) {
     overflow: "visible",
   }}
 >
-  {/*
-    viewBox 200x50 → perimeter = 2*(200+50) = 500
-    dash=40, gap=460 → one dash visible at all times
-    offset animates 0 → -500 = exactly one full loop
-  */}
   <svg
     viewBox="0 0 200 50"
     preserveAspectRatio="none"
@@ -211,13 +197,11 @@ export default function ScrollServices({ services }) {
       overflow: "visible",
     }}
   >
-    {/* dim static border */}
     <rect x="1" y="1" width="198" height="48"
       fill="transparent"
       stroke="rgba(255,255,255,0.2)"
       strokeWidth="1"
     />
-    {/* running dash */}
     <motion.rect
       x="1" y="1" width="198" height="48"
       fill="transparent"
