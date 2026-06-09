@@ -223,7 +223,7 @@ body::-webkit-scrollbar {
           </div>
           <div className="marquee-wrapper">
             <div className="marquee-track">
-              <div className="marquee-text">REACH THE PEOPLE THAT MATTER REACH THE PEOPLE THAT MATTER REACH THE PEOPLE THAT MATTER REACH THE PEOPLE THAT MATTER </div>
+              <div className="marquee-text">REACH THE PEOPLE THAT MATTER $ REACH THE PEOPLE THAT MATTER $ REACH THE PEOPLE THAT MATTER $REACH THE PEOPLE THAT MATTER </div>
             </div>
           </div>
         </div>
