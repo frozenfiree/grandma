@@ -290,8 +290,7 @@ export default function Footer() {
                </div>
 
               <div className="office-info">
-              FL 5
-                <br />
+              
                 AHMEDABAD, GJ, 380 009
               </div>
 
@@ -311,10 +310,8 @@ export default function Footer() {
               <div className="office-info">803 Sky Vista</div>
 
               <div className="office-info">
-                FL 8
-                <br />
+               
                 PUNE, MH, 411 014
-                <br />
                 
               </div>
 
@@ -335,10 +332,8 @@ export default function Footer() {
               
 
               <div className="office-info">
-                FL 31
-                <br />
+           
                 WILMINGTON, DE 19801
-                <br />
                 
               </div>
 
@@ -369,7 +364,7 @@ export default function Footer() {
             {/* <div className="footer-award-stars">★★★★★</div> */}
 
             <button className="award-btn">
-              GRANDMA.COM
+              GRANDMASHIVE.COM
             </button>
           </div>
         </div>

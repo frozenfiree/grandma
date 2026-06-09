@@ -1,21 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
-import GlitchText from './GlitchText';
-import { useLoader } from './LoaderContext';
+import { ROUTES } from '../routes';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
-  const [mountKey] = useState(() => Date.now());
-  const { isLoaded } = useLoader();
   const dropdownRef = useRef(null);
   const navbarRef = useRef(null);
   const location = useLocation();
   const navigate = useNavigate();
 
-  const isServicePage = location.pathname.startsWith('/services');
+  const isServicePage = location.pathname.startsWith(ROUTES.SERVICES);
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -58,28 +55,28 @@ const Navbar = () => {
     number: '01',
     name: 'Plan',
     desc: 'Strategy, positioning, audience, sequencing.',
-    path: '/services/5',
+    path: ROUTES.SERVICE_5,
   },
   {
     id: 2,
     number: '02',
     name: 'Build',
     desc: 'Brand, identity, web, landing pages.',
-    path: '/services/2',
+    path: ROUTES.SERVICE_2,
   },
   {
     id: 3,
     number: '03',
     name: 'Produce',
     desc: 'Podcast, video, motion, content.',
-    path: '/services/3',
+    path: ROUTES.SERVICE_3,
   },
   {
     id: 4,
     number: '04',
     name: 'Distribute',
     desc: 'Paid media, campaigns, reporting.',
-    path: '/services/9',
+    path: ROUTES.SERVICE_9,
   },
 ];
 
@@ -102,11 +99,11 @@ const Navbar = () => {
   const handleNavigation = (item) => {
     setIsMobileMenuOpen(false);
     setIsServicesDropdownOpen(false);
-    if (item === 'HOME') navigate('/');
-    else if (item === 'ABOUT') navigate('/about');
-    else if (item === 'WORK') navigate('/work');
-    else if (item === 'SERVICES') navigate('/services');
-    else if (item === 'CONTACT') navigate('/contact');
+    if (item === 'HOME') navigate(ROUTES.HOME);
+    else if (item === 'ABOUT') navigate(ROUTES.ABOUT);
+    else if (item === 'WORK') navigate(ROUTES.WORK);
+    else if (item === 'SERVICES') navigate(ROUTES.SERVICES);
+    else if (item === 'CONTACT') navigate(ROUTES.CONTACT);
     // else if (item === 'INSIGHTS') navigate('/insights');
   };
 
@@ -128,12 +125,12 @@ const navHoverColor = (isScrolled || isServicePage)
   : 'rgba(0,0,0,0.9)'
 
   const isActive = (item) => {
-    if (item === 'HOME' && location.pathname === '/') return true;
-    if (item === 'ABOUT' && location.pathname === '/about') return true;
-    if (item === 'WORK' && location.pathname === '/work') return true;
-    if (item === 'SERVICES' && location.pathname === '/services') return true;
-    if (item === 'CONTACT' && location.pathname === '/contact') return true;
-    if (item === 'INSIGHTS' && location.pathname === '/insights') return true;
+    if (item === 'HOME' && location.pathname === ROUTES.HOME) return true;
+    if (item === 'ABOUT' && location.pathname === ROUTES.ABOUT) return true;
+    if (item === 'WORK' && location.pathname === ROUTES.WORK) return true;
+    if (item === 'SERVICES' && location.pathname === ROUTES.SERVICES) return true;
+    if (item === 'CONTACT' && location.pathname === ROUTES.CONTACT) return true;
+    if (item === 'INSIGHTS' && location.pathname === ROUTES.INSIGHTS) return true;
     return false;
   };
 
@@ -169,7 +166,7 @@ const navHoverColor = (isScrolled || isServicePage)
         {/* Logo */}
       <motion.a
   className="navbar-brand text-logo-wrapper logo-hover"
-  onClick={() => navigate('/')}
+  onClick={() => navigate(ROUTES.HOME)}
   style={{
     fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
     fontWeight: 700,
@@ -223,13 +220,7 @@ const navHoverColor = (isScrolled || isServicePage)
                         transition: 'color 0.35s cubic-bezier(0.4,0,0.2,1)',
                       }}
                     >
-                      <GlitchText
-                        key={`${mountKey}-${item}`}
-                        text={item}
-                        duration={600}
-                        delay={tabIndex * 120}
-                        trigger={isLoaded}
-                      />
+                      {item}
                       <span
                         style={{
                           fontSize: '10px',
@@ -244,7 +235,7 @@ const navHoverColor = (isScrolled || isServicePage)
                     </motion.button>
 
                     {/* Home page dropdown — isolated from Hero wave animation */}
-                    {isServicesDropdownOpen && location.pathname === '/' && (
+                    {isServicesDropdownOpen && location.pathname === ROUTES.HOME && (
                       <div className="services-dropdown-home">
                         <div className="services-grid-home">
                           {services.map((service) => (
@@ -258,7 +249,7 @@ const navHoverColor = (isScrolled || isServicePage)
                     )}
 
                     {/* All other pages dropdown */}
-                    {isServicesDropdownOpen && location.pathname !== '/' && (
+                    {isServicesDropdownOpen && location.pathname !== ROUTES.HOME && (
                       <div className="services-dropdown">
                         <div className="services-grid">
                           {services.map((service) => (
@@ -284,13 +275,7 @@ const navHoverColor = (isScrolled || isServicePage)
                       transition: 'color 0.35s cubic-bezier(0.4,0,0.2,1)',
                     }}
                   >
-                    <GlitchText
-                      key={`${mountKey}-${item}`}
-                      text={item}
-                      duration={600}
-                      delay={tabIndex * 120}
-                      trigger={isLoaded}
-                    />
+                    {item}
                   </motion.button>
                 )}
               </li>

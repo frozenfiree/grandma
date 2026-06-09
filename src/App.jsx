@@ -6,6 +6,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import PageLoader from './components/PageLoader';
 import ScrollToTop from './components/ScrollToTop';
+import LegacyRedirectGuard from './components/LegacyRedirectGuard';
+import { ROUTES } from './routes';
 
 // Always-needed on home — eager
 import Hero from './components/Hero';
@@ -52,6 +54,7 @@ function App() {
   return (
     <LoaderProvider>
       <Router>
+        <LegacyRedirectGuard />
         <ScrollToTop />
         <PageLoader />
         <CustomCursor />
@@ -60,7 +63,7 @@ function App() {
           <Suspense fallback={null}>
             <Routes>
               <Route
-                path="/"
+                path={ROUTES.HOME}
                 element={
                   <>
                     <Hero />
@@ -72,25 +75,25 @@ function App() {
                   </>
                 }
               />
-              <Route path="/about"        element={<AboutSection />} />
-              <Route path="/work"         element={<WorkPage />} />
-              <Route path="/insights"     element={<InsightPage />} />
-              <Route path="/contact"      element={<ContactPage />} />
-              <Route path="/services"     element={<ServicesPage />} />
-              <Route path="/services/1"   element={<Service1 />} />
-              <Route path="/services/2"   element={<Service2 />} />
-              <Route path="/services/3"   element={<Service3 />} />
-              <Route path="/services/4"   element={<Service4 />} />
-              <Route path="/services/5"   element={<Service5 />} />
-              <Route path="/services/6"   element={<Service6 />} />
-              <Route path="/services/7"   element={<Service7 />} />
-              <Route path="/services/8"   element={<Service8 />} />
-              <Route path="/services/9"   element={<Service9 />} />
-              <Route path="/services/10"  element={<Service10 />} />
-              <Route path="/services/:id" element={<ServiceDetailPage />} />
-              <Route path="/work/fantom"  element={<WorkFantom />} />
-              <Route path="/work/wing"    element={<WorkWing />} />
-              <Route path="/work/swisher" element={<WorkSwisher />} />
+              <Route path={ROUTES.ABOUT}         element={<AboutSection />} />
+              <Route path={ROUTES.WORK}           element={<WorkPage />} />
+              <Route path={ROUTES.INSIGHTS}       element={<InsightPage />} />
+              <Route path={ROUTES.CONTACT}        element={<ContactPage />} />
+              <Route path={ROUTES.SERVICES}       element={<ServicesPage />} />
+              <Route path={ROUTES.SERVICE_1}      element={<Service1 />} />
+              <Route path={ROUTES.SERVICE_2}      element={<Service2 />} />
+              <Route path={ROUTES.SERVICE_3}      element={<Service3 />} />
+              <Route path={ROUTES.SERVICE_4}      element={<Service4 />} />
+              <Route path={ROUTES.SERVICE_5}      element={<Service5 />} />
+              <Route path={ROUTES.SERVICE_6}      element={<Service6 />} />
+              <Route path={ROUTES.SERVICE_7}      element={<Service7 />} />
+              <Route path={ROUTES.SERVICE_8}      element={<Service8 />} />
+              <Route path={ROUTES.SERVICE_9}      element={<Service9 />} />
+              <Route path={ROUTES.SERVICE_10}     element={<Service10 />} />
+              <Route path={ROUTES.SERVICE_DETAIL} element={<ServiceDetailPage />} />
+              <Route path={ROUTES.WORK_FANTOM}    element={<WorkFantom />} />
+              <Route path={ROUTES.WORK_WING}      element={<WorkWing />} />
+              <Route path={ROUTES.WORK_SWISHER}   element={<WorkSwisher />} />
             </Routes>
           </Suspense>
           <Footer />
