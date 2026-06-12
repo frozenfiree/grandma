@@ -1,3 +1,4 @@
+import s4name from "../../../assets/videos/service4-name-loop.mp4";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from '../../../routes';
@@ -56,7 +57,7 @@ body::-webkit-scrollbar { display: none; }
         <div className="video-section">
           <div className="w-[500px] h-[200px] overflow-hidden rounded-xl shadow-lg bg-black relative">
             <video
-              src="https://framerusercontent.com/assets/gL8FslI4JIFFv2buAI6mbJZJHgM.mp4"
+              src={s4name}
               autoPlay loop muted playsInline
               style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", top: 0, left: 0 }}
             />

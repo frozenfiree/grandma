@@ -1,3 +1,5 @@
+import insE1 from "../assets/videos/insight-editorial-1.mp4";
+import insE2 from "../assets/videos/insight-editorial-2.mp4";
 import sigEditorial from "../assets/videos/signature-editorial-loop.mp4";
 import { useEffect, useState } from "react";
 import InsightPageScroll from "./InsightPageScroll";
@@ -372,7 +374,7 @@ html, body {
   {/* VIDEO 1 */}
   <div className="video-card card1">
     <video autoPlay muted loop playsInline>
-      <source src="https://framerusercontent.com/assets/MBzt9Ml5H475LeuQ2cFagIwg8.mp4" />
+      <source src={insE1} />
     </video>
 
     <div className="video-info">
@@ -396,7 +398,7 @@ html, body {
   {/* VIDEO 3 */}
   <div className="video-card card3">
     <video autoPlay muted loop playsInline>
-      <source src="https://framerusercontent.com/assets/uCMxao7XZuj1q96TksAh5XBMHk.mp4" />
+      <source src={insE2} />
     </video>
 
     <div className="video-info">

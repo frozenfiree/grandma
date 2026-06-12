@@ -1,3 +1,8 @@
+import s4w1 from "../../../assets/videos/service4-webgl-1.mp4";
+import s4w2 from "../../../assets/videos/service4-webgl-2.mp4";
+import s4w3 from "../../../assets/videos/service4-webgl-3.mp4";
+import s4w4 from "../../../assets/videos/service4-webgl-4.mp4";
+import s4w5 from "../../../assets/videos/service4-webgl-5.mp4";
 import sigAbstract from "../../../assets/videos/signature-abstract-loop.mp4";
 import React, { useState } from "react";
 import "../serviceMobile.css";
@@ -77,7 +82,7 @@ export default function Info() {
       <div className="video-section">
         <div className="media-row">
           <div className="media-box">
-            <video src="https://framerusercontent.com/assets/tfgRHcYeN9bRcWJcC1cMwhMKZE.mp4" autoPlay loop muted playsInline />
+            <video src={s4w5} autoPlay loop muted playsInline />
           </div>
           {/* <div className="media-box">
             <video src={sigAbstract} autoPlay loop muted playsInline />
@@ -102,10 +107,10 @@ export default function Info() {
 
       <div className="media-row">
         <div className="media-box">
-          <video src="https://framerusercontent.com/assets/2CaTsl5bffWZqafmEfgO3AcSRY.mp4" autoPlay loop muted playsInline />
+          <video src={s4w1} autoPlay loop muted playsInline />
         </div>
         <div className="media-box">
-          <video src="https://framerusercontent.com/assets/PtldTrJTMWDKKkufOh7uv02XOJM.mp4" autoPlay loop muted playsInline />
+          <video src={s4w3} autoPlay loop muted playsInline />
         </div>
         <div className="media-box link-box">
           <a href="/work" className="media-link">VIEW PROJECT →</a>
@@ -122,8 +127,8 @@ export default function Info() {
       </div>
 
       <div className="last-video-row">
-        <video src="https://framerusercontent.com/assets/5J37YIX5TVpaIUTQEYfYqIevLfk.mp4" autoPlay loop muted playsInline className="video-left" />
-        <video src="https://framerusercontent.com/assets/S77MWBiNvQ0BuPG7bWcfrUsYjUw.mp4" autoPlay loop muted playsInline className="video-right" />
+        <video src={s4w2} autoPlay loop muted playsInline className="video-left" />
+        <video src={s4w4} autoPlay loop muted playsInline className="video-right" />
       </div>
     </div>
   );

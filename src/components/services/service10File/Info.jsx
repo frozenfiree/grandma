@@ -1,3 +1,6 @@
+import s10i1 from "../../../assets/videos/service10-infra-1.mp4";
+import s10i2 from "../../../assets/videos/service10-infra-2.mp4";
+import s10i3 from "../../../assets/videos/service10-infra-3.mp4";
 import sigAbstract from "../../../assets/videos/signature-abstract-loop.mp4";
 import sigTech from "../../../assets/videos/signature-tech-loop.mp4";
 import sigBrand from "../../../assets/videos/signature-brand-loop.mp4";
@@ -61,7 +64,7 @@ export default function Info() {
       `}</style>
 
       <div className="video-section">
-        <video src="https://framerusercontent.com/assets/lwzI8KwVzVJveq0B8T4F4FMqw.mp4" autoPlay loop muted playsInline />
+        <video src={s10i3} autoPlay loop muted playsInline />
       </div>
 
       <div className="accordion-container">
@@ -88,8 +91,8 @@ export default function Info() {
       <div className="grid-section">
        
         <div className="grid-row">
-          <div className="grid-item"><video src="https://framerusercontent.com/assets/EVd6sAbZEDEHCJnIZsaDQz3VRQ.mp4" autoPlay loop muted playsInline /></div>
-          <div className="grid-item"><video src="https://framerusercontent.com/assets/7u4fnP6WThcqoudq3t7UrbImRdI.mp4" autoPlay loop muted playsInline /></div>
+          <div className="grid-item"><video src={s10i2} autoPlay loop muted playsInline /></div>
+          <div className="grid-item"><video src={s10i1} autoPlay loop muted playsInline /></div>
         </div>
       </div>
     </div>
