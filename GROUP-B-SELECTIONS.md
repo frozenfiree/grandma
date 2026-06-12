@@ -62,3 +62,65 @@
   been a bright regression on the dark site. Swapped for the dark smoke clip.
 
 **Batch 1 footprint:** 4 files, **8.6 MB** total, all 1080p, all dark-verified.
+
+---
+
+## Batch 2 — Fully de-Framer service4 (WebGL/abstract), service10 (infra), InsightPage (editorial)
+
+All **Pexels License** (free commercial, no attribution, no standalone
+redistribution), all downloaded via `pexels.com/download/video/{ID}/`, optimized
+to 1080p H.264, no audio. All **dark-verified** (low YAVG).
+
+| Local file | Pexels ID / page | YAVG | Why it matches | Target |
+|---|---|---|---|---|
+| `service4-webgl-1.mp4` | [27980029](https://www.pexels.com/video/27980029/) | 19 | Blue lines/dots particles on dark — abstract 3D feel | service4/Info |
+| `service4-webgl-2.mp4` | [34992134](https://www.pexels.com/video/34992134/) | 29 | Molecular structure animation — WebGL/3D | service4/Info |
+| `service4-webgl-3.mp4` | [29765099](https://www.pexels.com/video/29765099/) | 17 | Neon particles in dark space | service4/Info |
+| `service4-webgl-4.mp4` | [29920181](https://www.pexels.com/video/29920181/) | 25 | Vivid glowing particles motion | service4/Info |
+| `service4-webgl-5.mp4` | [35286672](https://www.pexels.com/video/35286672/) | 19 | Glittering particles on dark | service4/Info |
+| `service4-name-loop.mp4` | [30064796](https://www.pexels.com/video/30064796/) | 94 | Spinning neon digital — energetic title accent (brighter; see risk note) | service4/Name |
+| `service10-infra-1.mp4` | [1085656](https://www.pexels.com/video/1085656/) | 45 | Blue network cables/connections — infra | service10/Info |
+| `service10-infra-2.mp4` | [7140931](https://www.pexels.com/video/7140931/) | 43 | Electronic processor close-up — hardware | service10/Info |
+| `service10-infra-3.mp4` | [853919](https://www.pexels.com/video/853919/) | 36 | Moody tech screen — datacenter mood | service10/Info |
+| `insight-editorial-1.mp4` | [29853254](https://www.pexels.com/video/29853254/) | 23 | Glowing particles in dark space — premium editorial texture | InsightPage |
+| `insight-editorial-2.mp4` | [30133176](https://www.pexels.com/video/30133176/) | 33 | Glowing orb with particle trail — editorial | InsightPage |
+
+**Rejected in QA:** `5028622` (YAVG 97) & `38000679` (YAVG 98) — too bright for a
+dark site; `35160268`, `15886614`, `34576602`, `35044924` — portrait orientation
+(would crop badly in landscape boxes).
+
+---
+
+## Batch 3 — Fully de-Framer service1 (technology) + service8 (strategy)
+
+All **Pexels License**, optimized 1080p, dark-verified.
+
+| Local file | Pexels ID / page | YAVG | Why it matches | Target |
+|---|---|---|---|---|
+| `service1-tech-flow.mp4` | [33248294](https://www.pexels.com/video/33248294/) | 29 | Futuristic network connections — tech/delivery | service1/Info |
+| `service1-network.mp4` | [3129595](https://www.pexels.com/video/3129595/) | 22 | Neon plexus geometric lines — network | service1/Info |
+| `service1-tech-motion.mp4` | [34996641](https://www.pexels.com/video/34996641/) | 43 | Glowing molecular tech animation | service1/Info |
+| `service1-data-flow.mp4` | [3141210](https://www.pexels.com/video/3141210/) | 38 | Digital geometric symmetry — data | service1/Info |
+| `service1-abstract-a.mp4` | [32336493](https://www.pexels.com/video/32336493/) | 45 | Illuminated digital network nodes | service1/Info |
+| `service1-abstract-b.mp4` | [37379497](https://www.pexels.com/video/37379497/) | 51 | Glowing purple particle cluster | service1/Info |
+| `service8-strategy-1.mp4` | [34992913](https://www.pexels.com/video/34992913/) | 29 | 3D network of purple spheres — premium abstract | service8/Info |
+
+**Rejected in QA:** `34995393`, `35002915` — portrait orientation.
+
+---
+
+## Deferred to a later, curation-led pass (NOT replaced this pass)
+
+Left intentionally on Framer because they need human visual curation and/or carry
+higher aesthetic risk (per rule 7 — don't replace unless high-confidence):
+
+- **service2** (Design/Tech, 8 videos) — creative/design texture; subjective.
+- **service3** (Content/Media, 5 videos) — editorial/studio; literal studio
+  footage risks reading as the "generic stock-business footage" the brief forbids,
+  so these want hand-picked abstract textures.
+- **service5** (Strategy/Marketing, 4 + 1 name) — brand/editorial; subjective.
+- **service6** (Brand Identity, 4 + 1 name + **4 stills**) — brand identity is the
+  most aesthetic-sensitive section; stills especially need design review.
+- **Stills:** service1 (2 png), service6 (4 jpg), InteractiveBanner (1 png) — image
+  curation deferred.
+- **Fonts:** the 4 Lay Grotesk `.woff2` — explicitly out of scope this pass.
