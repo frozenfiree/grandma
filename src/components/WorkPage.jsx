@@ -1,3 +1,4 @@
+import sigAbstract from "../assets/videos/signature-abstract-loop.mp4";
   import React from 'react';
   import { motion } from 'framer-motion';
   import WorkCard from './WorkCard';
@@ -13,7 +14,7 @@
   title: 'Gaandiva',
   description: 'A powerful CRM platform that helps businesses manage customer relationships, streamline sales pipelines, automate workflows, and drive growth through actionable insights.',
   category: 'CRM Platform',
-  video: 'https://framerusercontent.com/assets/hQUXKbpvYZyElXRxbNmW95ph8Q.mp4',
+  video: sigAbstract,
   link: ROUTES.SERVICE_1
 },
     { id: 2, title: 'TECH PUBLICATION',     description: 'Five vertical newsrooms , MarTech, FinTech, HRTech, CyberTech, SalesTech',    category: 'MEDIA NETWORK',            video: MortionGrandma, link: ROUTES.WORK_WING    },

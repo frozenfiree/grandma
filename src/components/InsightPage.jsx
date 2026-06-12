@@ -1,3 +1,4 @@
+import sigEditorial from "../assets/videos/signature-editorial-loop.mp4";
 import { useEffect, useState } from "react";
 import InsightPageScroll from "./InsightPageScroll";
 
@@ -383,7 +384,7 @@ html, body {
   {/* VIDEO 2 */}
   <div className="video-card card2">
     <video autoPlay muted loop playsInline>
-      <source src="https://framerusercontent.com/assets/KTnvZtMoXWeUfnqfR6pqtZyo82Y.mp4" />
+      <source src={sigEditorial} />
     </video>
 
     <div className="video-info">

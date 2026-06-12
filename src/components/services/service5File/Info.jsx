@@ -1,3 +1,4 @@
+import sigAbstract from "../../../assets/videos/signature-abstract-loop.mp4";
 import React, { useState } from "react";
 import "../serviceMobile.css";
 
@@ -116,7 +117,7 @@ The result is fewer assumptions, fewer revisions, and a clearer path from idea t
         style={{ width: "100%", height: "100vh", objectFit: "cover", display: "block", paddingTop: "80px" ,marginBottom:"170px" }} />
       {/* <video
   className="bottom-video"
-  src="https://framerusercontent.com/assets/hQUXKbpvYZyElXRxbNmW95ph8Q.mp4"
+  src={sigAbstract}
   autoPlay
   loop
   muted

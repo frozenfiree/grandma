@@ -1,3 +1,5 @@
+import sigAbstract from "../assets/videos/signature-abstract-loop.mp4";
+import sigTech from "../assets/videos/signature-tech-loop.mp4";
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import ghLogo from '../assets/grandmahivespng.png';
@@ -13,13 +15,13 @@ const InteractiveBanner = () => {
   const images = [
     {
       id: 1,
-      url: "https://framerusercontent.com/images/hQUXKbpvYZyElXRxbNmW95ph8Q.mp4", // Wing video
+      url: sigAbstract, // Wing video
       title: "Wing",
       position: "left"
     },
     {
       id: 2,
-      url: "https://framerusercontent.com/images/XzKm3c6TBPnQY2RLiGOpjE83OU0.mp4", // Fantom video
+      url: sigTech, // Fantom video
       title: "Fantom",
       position: "center-left"
     },

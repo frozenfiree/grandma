@@ -1,3 +1,4 @@
+import sigEditorial from "../../../assets/videos/signature-editorial-loop.mp4";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from '../../../routes';
@@ -47,7 +48,7 @@ function Name() {
         <div className="video-section">
           <div className="w-[500px] h-[200px] overflow-hidden rounded-xl shadow-lg bg-black relative">
             <video
-              src="https://framerusercontent.com/assets/KTnvZtMoXWeUfnqfR6pqtZyo82Y.mp4"
+              src={sigEditorial}
               autoPlay loop muted playsInline
               style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", top: 0, left: 0 }}
             />

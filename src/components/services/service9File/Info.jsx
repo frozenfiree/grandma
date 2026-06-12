@@ -1,3 +1,6 @@
+import sigAbstract from "../../../assets/videos/signature-abstract-loop.mp4";
+import sigTech from "../../../assets/videos/signature-tech-loop.mp4";
+import sigBrand from "../../../assets/videos/signature-brand-loop.mp4";
 import React, { useState } from "react";
 import "../serviceMobile.css";
 
@@ -59,8 +62,8 @@ export default function Info() {
 
       <div className="info-video-section">
         <div className="media-row" style={{ marginTop: 0 }}>
-          <div className="media-box"><video src="https://framerusercontent.com/assets/LqHnLVpPrDaiM1FZ63ODyW25jaw.mp4" autoPlay loop muted playsInline /></div>
-          <div className="media-box"><video src="https://framerusercontent.com/assets/hQUXKbpvYZyElXRxbNmW95ph8Q.mp4" autoPlay loop muted playsInline /></div>
+          <div className="media-box"><video src={sigBrand} autoPlay loop muted playsInline /></div>
+          <div className="media-box"><video src={sigAbstract} autoPlay loop muted playsInline /></div>
         </div>
       </div>
 
@@ -86,8 +89,8 @@ Every campaign is tracked, analysed, and improved over time."
       </div>
 
       <div className="media-row">
-        <div className="media-box"><video src="https://framerusercontent.com/assets/XzKm3c6TBPnQY2RLiGOpjE83OU0.mp4" autoPlay loop muted playsInline /></div>
-        <div className="media-box"><video src="https://framerusercontent.com/assets/LqHnLVpPrDaiM1FZ63ODyW25jaw.mp4" autoPlay loop muted playsInline /></div>
+        <div className="media-box"><video src={sigTech} autoPlay loop muted playsInline /></div>
+        <div className="media-box"><video src={sigBrand} autoPlay loop muted playsInline /></div>
         <div className="media-box link-box"><a href="/work" className="media-link">VIEW PROJECT →</a></div>
       </div>
 
@@ -123,8 +126,8 @@ Continuous improvement based on data and outcomes.
       </div>
 
       <div className="last-video-row">
-        <video src="https://framerusercontent.com/assets/hQUXKbpvYZyElXRxbNmW95ph8Q.mp4" autoPlay loop muted playsInline className="video-left" />
-        <video src="https://framerusercontent.com/assets/XzKm3c6TBPnQY2RLiGOpjE83OU0.mp4" autoPlay loop muted playsInline className="video-right" />
+        <video src={sigAbstract} autoPlay loop muted playsInline className="video-left" />
+        <video src={sigTech} autoPlay loop muted playsInline className="video-right" />
       </div>
     </div>
   );

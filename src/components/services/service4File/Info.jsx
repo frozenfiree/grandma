@@ -1,3 +1,4 @@
+import sigAbstract from "../../../assets/videos/signature-abstract-loop.mp4";
 import React, { useState } from "react";
 import "../serviceMobile.css";
 
@@ -79,7 +80,7 @@ export default function Info() {
             <video src="https://framerusercontent.com/assets/tfgRHcYeN9bRcWJcC1cMwhMKZE.mp4" autoPlay loop muted playsInline />
           </div>
           {/* <div className="media-box">
-            <video src="https://framerusercontent.com/assets/hQUXKbpvYZyElXRxbNmW95ph8Q.mp4" autoPlay loop muted playsInline />
+            <video src={sigAbstract} autoPlay loop muted playsInline />
           </div> */}
         </div>
       </div>
