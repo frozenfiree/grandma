@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../serviceMobile.css";
 import UIUX from "../../../assets/UIUX.mp4";
-// import scrollingvideo from "../../../assets/scrollingvideo.mp4";
 import service3 from "../../../assets/service3.png";
 
 

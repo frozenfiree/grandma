@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import planevideo from "../../../assets/planevideo.mp4";
 import "../serviceMobile.css";
-import gaandiva from "../../../assets/gaandiva.png";
+import serviceMedia from "../../../assets/serveice1div.png";
 
 const AccordionItem = ({ title, content, isOpen, onClick }) => {
   return (
@@ -352,7 +352,7 @@ body::-webkit-scrollbar {
   </div>
 
   <div className="box">
-    <img src={gaandiva} alt="media" />
+    <img src={serviceMedia} alt="media" />
   </div>
 
   <div className="box">

@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
+import ghLogo from '../assets/grandmahivespng.png';
+import podcastReel from '../assets/podcast.mp4';
 
 const InteractiveBanner = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -23,8 +25,8 @@ const InteractiveBanner = () => {
     },
     {
       id: 3,
-      url: "https://framerusercontent.com/images/LqHnLVpPrDaiM1FZ63ODyW25jaw.mp4", // Swisher video
-      title: "Swisher",
+      url: podcastReel, // Podcast Studio (local asset)
+      title: "Podcast Studio",
       position: "center"
     },
     {
@@ -35,8 +37,8 @@ const InteractiveBanner = () => {
     },
     {
       id: 5,
-      url: "https://framerusercontent.com/images/9xtgo3K6XQ9xDg87e8qbD1QWPk.svg", // Logo
-      title: "Logo",
+      url: ghLogo, // Grandma's Hive logo (local asset)
+      title: "Grandma's Hive",
       position: "right"
     }
   ];

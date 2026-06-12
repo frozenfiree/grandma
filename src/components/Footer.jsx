@@ -346,11 +346,6 @@ export default function Footer() {
           </div>
 
           <div className="award-side">
-            {/* <img
-              className="award-logo"
-              src="https://cdn-icons-png.flaticon.com/512/616/616490.png"
-              alt="award"
-            /> */}
 
             
 
