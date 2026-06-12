@@ -1,3 +1,9 @@
+import s1tf from "../../../assets/videos/service1-tech-flow.mp4";
+import s1nw from "../../../assets/videos/service1-network.mp4";
+import s1tm from "../../../assets/videos/service1-tech-motion.mp4";
+import s1df from "../../../assets/videos/service1-data-flow.mp4";
+import s1aa from "../../../assets/videos/service1-abstract-a.mp4";
+import s1ab from "../../../assets/videos/service1-abstract-b.mp4";
 import React, { useState } from "react";
 import planevideo from "../../../assets/planevideo.mp4";
 import "../serviceMobile.css";
@@ -348,7 +354,7 @@ body::-webkit-scrollbar {
     <div className="media-section">
 
   <div className="box">
-    <video src="https://framerusercontent.com/assets/k60IZX99Pe2iroCU32yogDsEM.mp4" autoPlay loop muted playsInline />
+    <video src={s1tf} autoPlay loop muted playsInline />
   </div>
 
   <div className="box">
@@ -356,13 +362,13 @@ body::-webkit-scrollbar {
   </div>
 
   <div className="box">
-    <video src="https://framerusercontent.com/assets/SUoJA8Gjv1613evzDrJ7EsvLk8.mp4" autoPlay loop muted playsInline />
+    <video src={s1nw} autoPlay loop muted playsInline />
   </div>
 
 </div>
 <div className="drop-down-video">
   {/* <video
-    src="https://framerusercontent.com/assets/qdP7cDMQa3ZhXnMeV51Y3RDf8xg.mp4"
+    src={s1tm}
     autoPlay
     loop
     muted
@@ -383,7 +389,7 @@ body::-webkit-scrollbar {
 
 <div className="drop-down-video">
   <video
-    src="https://framerusercontent.com/assets/KA17Rw9QTm5F8ykEZHUUL4d6k.mp4"
+    src={s1df}
     autoPlay
     loop
     muted
@@ -410,7 +416,7 @@ body::-webkit-scrollbar {
 
     <div className="grid-item tall">
       <video
-        src="https://framerusercontent.com/assets/yw1VI4C31PtHswWOP8taEWP1rE.mp4"
+        src={s1aa}
         autoPlay
         loop
         muted
@@ -423,7 +429,7 @@ body::-webkit-scrollbar {
   <div className="grid-row second-row">
     <div className="grid-item tall">
       <video
-        src="https://framerusercontent.com/assets/fEZgoE7CH3y5pqm4S1TT9LaFiw.mp4"
+        src={s1ab}
         autoPlay
         loop
         muted

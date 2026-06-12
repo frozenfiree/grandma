@@ -1,3 +1,4 @@
+import s8s1 from "../../../assets/videos/service8-strategy-1.mp4";
 import sigAbstract from "../../../assets/videos/signature-abstract-loop.mp4";
 import sigTech from "../../../assets/videos/signature-tech-loop.mp4";
 import sigBrand from "../../../assets/videos/signature-brand-loop.mp4";
@@ -90,7 +91,7 @@ export default function Info() {
 
       <div className="grid-section">
         <div className="grid-row">
-          <div className="grid-item griditem1"><video src="https://framerusercontent.com/assets/WQzI7vwv2bso1fYCNF49C4CmZuk.mp4" autoPlay loop muted playsInline /></div>
+          <div className="grid-item griditem1"><video src={s8s1} autoPlay loop muted playsInline /></div>
           <div className="grid-item"><video src={sigTech} autoPlay loop muted playsInline /></div>
         </div>
         <div className="grid-row gridrow2">
