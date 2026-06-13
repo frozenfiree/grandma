@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import "../serviceMobile.css";
+import svc3v1 from "../../../assets/videos/svc3-1.mp4";
+import svc3v2 from "../../../assets/videos/svc3-2.mp4";
+import svc3v3 from "../../../assets/videos/svc3-3.mp4";
+import svc3v4 from "../../../assets/videos/svc3-4.mp4";
+import svc3v5 from "../../../assets/videos/svc3-5.mp4";
 import UIUX from "../../../assets/UIUX.mp4";
-import service3 from "../../../assets/service3.png";
+import service3 from "../../../assets/img/svc3-still.webp";
 
 
 const AccordionItem = ({ title, content, isOpen, onClick }) => {
@@ -120,7 +125,7 @@ One team. One workflow. Consistent output.`}
 
    <div className="media-box">
     <video
-      src="https://framerusercontent.com/assets/ogN0mZ2cJHKrEcSuXDt4UngW4.mp4"
+      src={svc3v1}
       autoPlay
       loop
       muted
@@ -140,7 +145,7 @@ One team. One workflow. Consistent output.`}
   {/* VIDEO 2 */}
   <div className="media-box">
    <video
-      src="https://framerusercontent.com/assets/ogN0mZ2cJHKrEcSuXDt4UngW4.mp4"
+      src={svc3v1}
       autoPlay
       loop
       muted
@@ -204,7 +209,7 @@ Organising, versioning, and delivering content for long-term use.
 </div>
 
 <video
-  src="https://framerusercontent.com/assets/hH1WNTCFwihwRuXcgBDgKndWdLg.mp4"
+  src={svc3v2}
   autoPlay
   loop
   muted
@@ -219,7 +224,7 @@ Organising, versioning, and delivering content for long-term use.
 />
 
 <video
-  src="https://framerusercontent.com/assets/w0fNWdKTxHBWQ2FeuDxHEDWSJVM.mp4"
+  src={svc3v3}
   autoPlay
   loop
   muted
@@ -235,7 +240,7 @@ Organising, versioning, and delivering content for long-term use.
 
 {/* <div className="last-video-row">
   <video
-    // src="https://framerusercontent.com/assets/83xxaSftRCQaNoSJvo7ircTC0.mp4"
+    // src={svc3v4}
     autoPlay
     loop
     muted
@@ -244,7 +249,7 @@ Organising, versioning, and delivering content for long-term use.
   />
 
   <video
-    // src="https://framerusercontent.com/assets/8o84gX417zxfX1wNxlctykhLnw.mp4"
+    // src={svc3v5}
     autoPlay
     loop
     muted

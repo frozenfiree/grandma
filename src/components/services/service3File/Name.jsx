@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from '../../../routes';
 import "../serviceMobile.css";
-import service3 from "../../../assets/service3.mp4";
+import service3 from "../../../assets/videos/svc3-hero.mp4";
 function Name() {
   const navigate = useNavigate();
   useEffect(() => {
