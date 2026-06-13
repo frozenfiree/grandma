@@ -3,7 +3,7 @@ import "../serviceMobile.css";
 import svc6type1 from "../../../assets/videos/svc6-type1.mp4";
 import svc6type2 from "../../../assets/videos/svc6-type2.mp4";
 import svc6type3 from "../../../assets/videos/svc6-type3.mp4";
-import svc6craft from "../../../assets/videos/svc-brand.mp4";
+import svc6craft from "../../../assets/videos/svc6-craft.mp4";
 import svc6still1 from "../../../assets/img/svc6-still-1.webp";
 import svc6still2 from "../../../assets/img/svc6-still-2.webp";
 import svc6still3 from "../../../assets/img/svc6-still-3.webp";

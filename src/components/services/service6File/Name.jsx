@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from '../../../routes';
 import "../serviceMobile.css";
-import svc6type1 from "../../../assets/videos/svc6-type1.mp4";
+import svc6type1 from "../../../assets/videos/svc6-type4.mp4";
 function Name() {
   const navigate = useNavigate();
   useEffect(() => {
