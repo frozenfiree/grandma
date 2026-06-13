@@ -325,10 +325,10 @@ body::-webkit-scrollbar {
       {/* 🔥 TOP CONTENT */}
      
 
-      {/* 🔥 PLANE VIDEO BELOW CONTENT */}
+      {/* 🔥 SOLUTION VIDEO BELOW CONTENT (data-flow / CRM pipeline) */}
       <div className="video-section">
         <video
-          src={planevideo}
+          src={s1df}
           autoPlay
           loop
           muted
