@@ -43,8 +43,8 @@ const ServiceCard = ({ service, index, onClick }) => {
         style={{
           transformStyle: "preserve-3d",
           cursor: 'pointer',
-          background: 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01))',
-          border: `1px solid ${isHovered ? service.color : 'rgba(219,255,0,0.2)'}`,
+          background: '#ffffff',
+          border: `1px solid ${isHovered ? service.color : 'rgba(0,0,0,0.1)'}`,
           borderRadius: '24px',
           overflow: 'hidden',
           transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -114,7 +114,7 @@ const ServiceCard = ({ service, index, onClick }) => {
         <div className="p-4">
           <motion.h5
             className="fw-bold mb-2"
-            style={{ color: service.color }}
+            style={{ color: '#111111' }}
             animate={{ x: isHovered ? 5 : 0 }}
           >
             {service.title}
@@ -368,7 +368,7 @@ const ServicesTicker = () => {
                 <span key={idx} className="mx-3" style={{
                   fontSize: '1.2rem',
                   fontWeight: 'bold',
-                  background: 'linear-gradient(90deg, #dbff00, #ffffff, #dbff00)',
+                  background: 'linear-gradient(90deg, #111111, #666666, #111111)',
                   WebkitBackgroundClip: 'text',
                   backgroundClip: 'text',
                   color: 'transparent'
@@ -517,7 +517,7 @@ const ServicesPage = () => {
   };
 
   return (
-    <div ref={containerRef} className="bg-black text-white position-relative min-vh-100">
+    <div ref={containerRef} className="position-relative min-vh-100" style={{ background: '#ffffff', color: '#111111' }}>
       {/* Scroll Progress Bar */}
       <motion.div
         className="position-fixed top-0 start-0 end-0"
@@ -573,8 +573,8 @@ const ServicesPage = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             style={{
-              background: 'linear-gradient(135deg, rgba(219,255,0,0.15), rgba(0,0,0,0.9))',
-              border: '1px solid rgba(219,255,0,0.3)'
+              background: 'linear-gradient(135deg, rgba(219,255,0,0.25), rgba(219,255,0,0.06))',
+              border: '1px solid rgba(219,255,0,0.4)'
             }}
           >
             <motion.div
@@ -629,7 +629,7 @@ const ServicesPage = () => {
 
       <style>{`
         .text-lime { color: #dbff00; }
-        .text-white-50 { color: rgba(255,255,255,0.5); }
+        .text-white-50 { color: rgba(0,0,0,0.55); }
         .bg-black { background-color: #000; }
         .min-vh-100 { min-height: 100vh; }
         .position-relative { position: relative; }
