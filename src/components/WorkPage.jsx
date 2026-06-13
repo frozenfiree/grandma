@@ -7,6 +7,10 @@ import sigAbstract from "../assets/videos/signature-abstract-loop.mp4";
   import Home1 from '../assets/Home1.mp4';
   import podcast from '../assets/podcast.mp4';
   import sigEditorial from '../assets/videos/signature-editorial-loop.mp4';
+  import cardGaandiva from '../assets/videos/card-gaandiva.mp4';
+  import cardSimplified from '../assets/videos/card-simplified.mp4';
+  import cardGtm from '../assets/videos/card-gtm.mp4';
+  import cardPodcast from '../assets/videos/card-podcast.mp4';
   import { ROUTES } from '../routes';
 
   const workItems = [
@@ -15,13 +19,12 @@ import sigAbstract from "../assets/videos/signature-abstract-loop.mp4";
   title: 'Gaandiva OS',
   description: 'A powerful CRM platform that helps businesses manage customer relationships, streamline sales pipelines, automate workflows, and drive growth through actionable insights.',
   category: 'CRM Platform',
-  video: sigAbstract,
-  graphic: 'nodes',
+  video: cardGaandiva,
   link: ROUTES.SERVICE_1
 },
-    { id: 2, title: 'GTM Publications',     description: 'Five vertical newsrooms , MarTech, FinTech, HRTech, CyberTech, SalesTech',    category: 'Media Network',            video: sigEditorial, graphic: 'publishing', link: ROUTES.WORK_WING    },
-    { id: 3, title: 'Podcast Studio',  description: 'Our studio is warming up. Launching soon!',         category: 'Coming Soon',            video: podcast, graphic: 'waveform', link: ROUTES.WORK_SWISHER },
-    { id: 4, title: 'Simplified Management', description: 'A project focused on simplifying management.', category: 'Management Platform', graphic: 'modules', link: ROUTES.WORK_FANTOM },
+    { id: 2, title: 'GTM Publications',     description: 'Five vertical newsrooms , MarTech, FinTech, HRTech, CyberTech, SalesTech',    category: 'Media Network',            video: cardGtm, link: ROUTES.WORK_WING    },
+    { id: 3, title: 'Podcast Studio',  description: 'Our studio is warming up. Launching soon!',         category: 'Coming Soon',            video: cardPodcast, link: ROUTES.WORK_SWISHER },
+    { id: 4, title: 'Simplified Management', description: 'A project focused on simplifying management.', category: 'Management Platform', video: cardSimplified, link: ROUTES.WORK_FANTOM },
   ];
 
   // ─── WorkPage ─────────────────────────────────────────────────────────────────
