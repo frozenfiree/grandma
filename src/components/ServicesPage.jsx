@@ -294,10 +294,10 @@ const ServicesHero = () => {
 // Animated Stats Section
 const ServicesStats = () => {
   const stats = [
-    { number: '500+', label: 'Projects Completed', color: '#dbff00', icon: '🚀' },
-    { number: '150+', label: 'Happy Clients', color: '#0066FF', icon: '😊' },
-    { number: '24/7', label: 'Support Available', color: '#ff3366', icon: '🛡️' },
-    { number: '10+', label: 'Expert Services', color: '#00ffcc', icon: '💎' }
+    { number: '500+', label: 'Projects Completed', color: '#dbff00', icon: '' },
+    { number: '150+', label: 'Happy Clients', color: '#0066FF', icon: '' },
+    { number: '24/7', label: 'Support Available', color: '#ff3366', icon: '' },
+    { number: '10+', label: 'Expert Services', color: '#00ffcc', icon: '' }
   ];
 
   return (
@@ -399,7 +399,7 @@ const ServicesPage = () => {
       shortDesc: 'Stunning 3D animations that bring your brand to life',
       fullDesc: 'We create breathtaking 3D motion graphics that captivate audiences and elevate your brand story.',
       image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop',
-      icon: '🎨',
+      icon: '',
       color: '#dbff00',
       features: ['Custom 3D Animations', 'Product Visualizations', 'Abstract Motion Graphics', 'Cinematic 3D Sequences', 'Real-time 3D Rendering'],
       technologies: ['Blender', 'Cinema 4D', 'After Effects', 'Three.js']
@@ -410,7 +410,7 @@ const ServicesPage = () => {
       shortDesc: 'Data-driven strategies for digital success',
       fullDesc: 'Our digital strategists work with you to develop comprehensive plans that align with your business goals.',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-      icon: '📊',
+      icon: '',
       color: '#0066FF',
       features: ['Market Analysis', 'Competitor Research', 'User Journey Mapping', 'ROI Forecasting', 'Growth Strategies'],
       technologies: ['Google Analytics', 'SEMrush', 'Hotjar', 'Tableau']
@@ -421,7 +421,7 @@ const ServicesPage = () => {
       shortDesc: 'Intuitive interfaces that users love',
       fullDesc: 'We design beautiful, user-centered interfaces that are both functional and aesthetically pleasing.',
       image: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&h=400&fit=crop',
-      icon: '🎯',
+      icon: '',
       color: '#ff3366',
       features: ['User Research', 'Wireframing & Prototyping', 'UI Design Systems', 'Usability Testing', 'Accessibility Design'],
       technologies: ['Figma', 'Adobe XD', 'Sketch', 'InVision']
@@ -432,7 +432,7 @@ const ServicesPage = () => {
       shortDesc: 'Interactive 3D web experiences',
       fullDesc: 'Leverage the power of WebGL to create stunning 3D experiences directly in the browser.',
       image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&h=400&fit=crop',
-      icon: '🌐',
+      icon: '',
       color: '#00ffcc',
       features: ['3D Product Configurators', 'Interactive Environments', 'Particle Systems', 'Shader Development', 'Performance Optimization'],
       technologies: ['Three.js', 'WebGL', 'Babylon.js', 'ShaderToy']
@@ -443,7 +443,7 @@ const ServicesPage = () => {
       shortDesc: 'Engaging interactive digital solutions',
       fullDesc: 'Create memorable interactive experiences that engage users and drive conversions.',
       image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop',
-      icon: '🎮',
+      icon: '',
       color: '#ffaa00',
       features: ['Gamification', 'Interactive Storytelling', 'Gesture Controls', 'VR/AR Experiences', 'Touch Interfaces'],
       technologies: ['Unity', 'WebXR', 'GSAP', 'React Spring']
@@ -454,7 +454,7 @@ const ServicesPage = () => {
       shortDesc: 'Unique brand identities that stand out',
       fullDesc: 'Build a strong brand identity that resonates with your audience.',
       image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop',
-      icon: '💎',
+      icon: '',
       color: '#dbff00',
       features: ['Logo Design', 'Brand Guidelines', 'Visual Identity Systems', 'Brand Strategy', 'Brand Voice Development'],
       technologies: ['Illustrator', 'Photoshop', 'Procreate', 'FontForge']
@@ -465,7 +465,7 @@ const ServicesPage = () => {
       shortDesc: 'Native and cross-platform mobile apps',
       fullDesc: 'Develop high-performance mobile applications for iOS and Android.',
       image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop',
-      icon: '📱',
+      icon: '',
       color: '#0066FF',
       features: ['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization', 'Mobile UI/UX'],
       technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin']
@@ -476,7 +476,7 @@ const ServicesPage = () => {
       shortDesc: 'Powerful online stores that sell',
       fullDesc: 'Build feature-rich e-commerce platforms that drive sales and provide seamless shopping experiences.',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-      icon: '🛒',
+      icon: '',
       color: '#ff3366',
       features: ['Custom E-commerce Development', 'Payment Gateway Integration', 'Inventory Management', 'Shopping Cart Optimization', 'SEO for E-commerce'],
       technologies: ['Shopify', 'WooCommerce', 'Magento', 'Stripe']
@@ -487,7 +487,7 @@ const ServicesPage = () => {
       shortDesc: 'Intelligent solutions powered by AI',
       fullDesc: 'Harness the power of artificial intelligence to automate processes, gain insights, and deliver personalized experiences.',
       image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
-      icon: '🤖',
+      icon: '',
       color: '#00ffcc',
       features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Recommendation Systems', 'Chatbot Development'],
       technologies: ['TensorFlow', 'PyTorch', 'OpenAI', 'Scikit-learn']
@@ -498,7 +498,7 @@ const ServicesPage = () => {
       shortDesc: 'Scalable cloud infrastructure and services',
       fullDesc: 'Migrate and manage your infrastructure on the cloud for better scalability, security, and cost-efficiency.',
       image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop',
-      icon: '☁️',
+      icon: '',
       color: '#ffaa00',
       features: ['Cloud Migration', 'DevOps Services', 'Serverless Architecture', 'Cloud Security', 'Cost Optimization'],
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes']
@@ -533,7 +533,6 @@ const ServicesPage = () => {
       <div className="grid-overlay" />
 
       <ServicesHero />
-      <ServicesStats />
       <ServicesTicker />
 
       {/* Services Grid Section */}

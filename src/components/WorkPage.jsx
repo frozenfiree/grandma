@@ -6,19 +6,20 @@ import sigAbstract from "../assets/videos/signature-abstract-loop.mp4";
   import MortionGrandma from '../assets/3dMortionGrandma.mp4';
   import Home1 from '../assets/Home1.mp4';
   import podcast from '../assets/podcast.mp4';
+  import sigEditorial from '../assets/videos/signature-editorial-loop.mp4';
   import { ROUTES } from '../routes';
 
   const workItems = [
     {
   id: 1,
-  title: 'Gaandiva',
+  title: 'Gaandiva OS',
   description: 'A powerful CRM platform that helps businesses manage customer relationships, streamline sales pipelines, automate workflows, and drive growth through actionable insights.',
   category: 'CRM Platform',
   video: sigAbstract,
   link: ROUTES.SERVICE_1
 },
-    { id: 2, title: 'TECH PUBLICATION',     description: 'Five vertical newsrooms , MarTech, FinTech, HRTech, CyberTech, SalesTech',    category: 'MEDIA NETWORK',            video: MortionGrandma, link: ROUTES.WORK_WING    },
-    { id: 3, title: 'THE PODCAST',  description: 'Our studio is warming up. Launching soon!',         category: 'COMING SOON',            video: podcast,          link: ROUTES.WORK_SWISHER },
+    { id: 2, title: 'GTM Publications',     description: 'Five vertical newsrooms , MarTech, FinTech, HRTech, CyberTech, SalesTech',    category: 'Media Network',            video: sigEditorial, link: ROUTES.WORK_WING    },
+    { id: 3, title: 'Podcast Studio',  description: 'Our studio is warming up. Launching soon!',         category: 'Coming Soon',            video: podcast,          link: ROUTES.WORK_SWISHER },
   ];
 
   // ─── WorkPage ─────────────────────────────────────────────────────────────────

@@ -5,6 +5,7 @@ import UIUX2 from "../assets/UIUX2.mp4";
 import MortionGrandma from "../assets/3dMortionGrandma.mp4";
 import Home1 from "../assets/Home1.mp4";
 import podcast from "../assets/podcast.mp4";
+import sigEditorial from "../assets/videos/signature-editorial-loop.mp4";
 import { ROUTES } from '../routes';
 
 const workItems = [
@@ -30,7 +31,7 @@ const workItems = [
   title: 'GTM Publications',
   description: 'Five vertical newsrooms , MarTech, FinTech, HRTech, CyberTech, SalesTech',
   category: 'Media Network',
-  video: MortionGrandma,
+  video: sigEditorial,
   link: ROUTES.WORK_WING
 },
 
