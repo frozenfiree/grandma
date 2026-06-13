@@ -19,8 +19,8 @@ const workItems = [
   {
   id: 2,
   title: 'Simplified Management',
-  description: '',
-  category: '',
+  description: 'A project focused on simplifying management.',
+  category: 'Management Platform',
   video: Home1,
   link: ROUTES.WORK
 },
@@ -37,7 +37,7 @@ const workItems = [
 {
   id: 4,
   title: 'Podcast Studio',
-  description: 'Our stuido is warming up. Launching soon!',
+  description: 'Our studio is warming up. Launching soon!',
   category: 'Coming Soon',
   video: podcast,
   link: ROUTES.WORK_SWISHER

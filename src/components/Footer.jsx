@@ -295,9 +295,7 @@ export default function Footer() {
               </div>
 
               <div className="office-contact">
-                hello@grandmahives.co
-                <br />
-                +52 33 3815 5238
+                hello@grandmashive.com
               </div>
             </div>
 
@@ -316,9 +314,7 @@ export default function Footer() {
               </div>
 
               <div className="office-contact">
-                hello@grandmashive.co
-                <br />
-                +1 510 592 8806
+                hello@grandmashive.com
               </div>
             </div>
 
@@ -338,9 +334,7 @@ export default function Footer() {
               </div>
 
               <div className="office-contact">
-                hello@grandmashive.co
-                <br />
-                +1 510 592 8806
+                hello@grandmashive.com
               </div>
             </div>
           </div>
@@ -350,8 +344,6 @@ export default function Footer() {
             
 
             <div className="footer-award-text">
-              TOP
-              <br />
               DIGITAL DESIGN
               <br />
               AGENCY

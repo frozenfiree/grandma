@@ -18,7 +18,7 @@ import sigAbstract from "../assets/videos/signature-abstract-loop.mp4";
   link: ROUTES.SERVICE_1
 },
     { id: 2, title: 'TECH PUBLICATION',     description: 'Five vertical newsrooms , MarTech, FinTech, HRTech, CyberTech, SalesTech',    category: 'MEDIA NETWORK',            video: MortionGrandma, link: ROUTES.WORK_WING    },
-    { id: 3, title: 'THE PODCAST',  description: 'Our stuido is warming up. Launching soon!',         category: 'COMING SOON',            video: podcast,          link: ROUTES.WORK_SWISHER },
+    { id: 3, title: 'THE PODCAST',  description: 'Our studio is warming up. Launching soon!',         category: 'COMING SOON',            video: podcast,          link: ROUTES.WORK_SWISHER },
   ];
 
   // ─── WorkPage ─────────────────────────────────────────────────────────────────

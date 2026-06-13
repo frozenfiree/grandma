@@ -106,29 +106,6 @@ export default function InsightPage() {
         </div>
       </div>
 
-      {/* STATS SECTION */}
-      <div className="stats-section">
-        <div className="stat-box">
-          <Counter end={150} suffix="+" />
-          <p>Research Papers</p>
-        </div>
-
-        <div className="stat-box">
-          <Counter end={50} suffix="K+" />
-          <p>Active Readers</p>
-        </div>
-
-        <div className="stat-box">
-          <Counter end={24} suffix="+" />
-          <p>Industry Reports</p>
-        </div>
-
-        <div className="stat-box">
-          <Counter end={15} />
-          <p>Expert Contributors</p>
-        </div>
-      </div>
-
       <style>{`
        * {
   margin: 0;
