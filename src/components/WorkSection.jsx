@@ -7,6 +7,10 @@ import Home1 from "../assets/Home1.mp4";
 import podcast from "../assets/podcast.mp4";
 import sigEditorial from "../assets/videos/signature-editorial-loop.mp4";
 import sigTech from "../assets/videos/signature-tech-loop.mp4";
+import cardGaandiva from "../assets/videos/card-gaandiva.mp4";
+import cardSimplified from "../assets/videos/card-simplified.mp4";
+import cardGtm from "../assets/videos/card-gtm.mp4";
+import cardPodcast from "../assets/videos/card-podcast.mp4";
 import { ROUTES } from '../routes';
 
 const workItems = [
@@ -15,8 +19,7 @@ const workItems = [
   title: 'Gaandiva OS',
   description: 'A powerful CRM platform that helps businesses manage customer relationships, streamline sales pipelines, automate workflows, and drive growth through actionable insights.',
   category: 'CRM Platform',
-  video: UIUX2,
-  graphic: 'nodes',
+  video: cardGaandiva,
   link: ROUTES.SERVICE_1
 },
   {
@@ -24,8 +27,7 @@ const workItems = [
   title: 'Simplified Management',
   description: 'A project focused on simplifying management.',
   category: 'Management Platform',
-  video: sigTech,
-  graphic: 'modules',
+  video: cardSimplified,
   link: ROUTES.WORK_FANTOM
 },
 
@@ -34,8 +36,7 @@ const workItems = [
   title: 'GTM Publications',
   description: 'Five vertical newsrooms , MarTech, FinTech, HRTech, CyberTech, SalesTech',
   category: 'Media Network',
-  video: sigEditorial,
-  graphic: 'publishing',
+  video: cardGtm,
   link: ROUTES.WORK_WING
 },
 
@@ -44,8 +45,7 @@ const workItems = [
   title: 'Podcast Studio',
   description: 'Our studio is warming up. Launching soon!',
   category: 'Coming Soon',
-  video: podcast,
-  graphic: 'waveform',
+  video: cardPodcast,
   link: ROUTES.WORK_SWISHER
 }
 ];
