@@ -4,6 +4,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import ghLogo from '../assets/grandmahivespng.png';
 import podcastReel from '../assets/podcast.mp4';
+import cardGaandiva from '../assets/videos/card-gaandiva.mp4';
+import cardSimplified from '../assets/videos/card-simplified.mp4';
+import cardGtm from '../assets/videos/card-gtm.mp4';
+import cardPodcast from '../assets/videos/card-podcast.mp4';
 
 const InteractiveBanner = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -15,26 +19,26 @@ const InteractiveBanner = () => {
   const images = [
     {
       id: 1,
-      url: sigAbstract, // Wing video
-      title: "Wing",
+      url: cardGaandiva, // Gaandiva OS
+      title: "Gaandiva OS",
       position: "left"
     },
     {
       id: 2,
-      url: sigTech, // Fantom video
-      title: "Fantom",
+      url: cardGtm, // GTM Publications
+      title: "GTM Publications",
       position: "center-left"
     },
     {
       id: 3,
-      url: podcastReel, // Podcast Studio (local asset)
+      url: cardPodcast, // Podcast Studio
       title: "Podcast Studio",
       position: "center"
     },
     {
       id: 4,
-      url: "https://framerusercontent.com/images/R4awib6TjNZjrU13Fc8KHDvZig.png", // Team image
-      title: "Team",
+      url: cardSimplified, // Simplified Management
+      title: "Simplified Management",
       position: "center-right"
     },
     {

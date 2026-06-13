@@ -4,6 +4,7 @@ import sigTech from "../../../assets/videos/signature-tech-loop.mp4";
 import sigBrand from "../../../assets/videos/signature-brand-loop.mp4";
 import React, { useState } from "react";
 import "../serviceMobile.css";
+import svc8strategy from "../../../assets/videos/svc-strategy.mp4";
 
 const AccordionItem = ({ title, content, isOpen, onClick }) => (
   <div className="accordion-item">
@@ -69,7 +70,7 @@ export default function Info() {
       `}</style>
 
       <div className="video-section">
-        <video  src="https://cdn.coverr.co/videos/coverr-temp-examplemain-mp4-9501/1080p.mp4" autoPlay loop muted playsInline />
+        <video  src={svc8strategy} autoPlay loop muted playsInline />
       </div>
 
       <div className="accordion-container">
