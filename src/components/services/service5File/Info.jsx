@@ -1,6 +1,10 @@
-import sigAbstract from "../../../assets/videos/signature-abstract-loop.mp4";
+import sigAbstract from "../../../assets/videos/svc5-5.mp4";
 import React, { useState } from "react";
 import "../serviceMobile.css";
+import svc5v1 from "../../../assets/videos/svc5-1.mp4";
+import svc5v2 from "../../../assets/videos/svc5-2.mp4";
+import svc5v3 from "../../../assets/videos/svc5-3.mp4";
+import svc5v4 from "../../../assets/videos/svc5-4.mp4";
 
 const AccordionItem = ({ title, content, isOpen, onClick }) => (
   <div className="accordion-item">
@@ -61,10 +65,10 @@ export default function Info() {
       <div className="info-video-section">
         <div className="media-row">
           <div className="media-box">
-            <video src="https://framerusercontent.com/assets/NzaVFCeAegy4h4hOOLAL9TtM8Q.mp4" autoPlay loop muted playsInline />
+            <video src={svc5v1} autoPlay loop muted playsInline />
           </div>
           <div className="media-box">
-            <video src="https://framerusercontent.com/assets/LF592xO33TcmwAMm9fcNJPUKpLk.mp4" autoPlay loop muted playsInline />
+            <video src={svc5v2} autoPlay loop muted playsInline />
           </div>
         </div>
       </div>
@@ -92,10 +96,10 @@ Every recommendation is built to be used, not filed away."
 
       <div className="media-row">
         <div className="media-box">
-          <video src="https://framerusercontent.com/assets/aXVmCH5QBjUfBbpKpHDMpqIfQ.mp4" autoPlay loop muted playsInline />
+          <video src={svc5v3} autoPlay loop muted playsInline />
         </div>
         <div className="media-box">
-          <video src="https://framerusercontent.com/assets/NzaVFCeAegy4h4hOOLAL9TtM8Q.mp4" autoPlay loop muted playsInline />
+          <video src={svc5v1} autoPlay loop muted playsInline />
         </div>
         <div className="media-box link-box">
           <a href="/work" className="media-link">VIEW PROJECT →</a>
@@ -113,7 +117,7 @@ The result is fewer assumptions, fewer revisions, and a clearer path from idea t
         </p>
       </div>
 
-      <video src="https://framerusercontent.com/assets/eDfW5EDsHWKKHeT57zvGeYvna4.mp4" autoPlay loop muted playsInline
+      <video src={svc5v4} autoPlay loop muted playsInline
         style={{ width: "100%", height: "100vh", objectFit: "cover", display: "block", paddingTop: "80px" ,marginBottom:"170px" }} />
       {/* <video
   className="bottom-video"
