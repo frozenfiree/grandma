@@ -1,5 +1,13 @@
 import React, { useState } from "react";
 import "../serviceMobile.css";
+import svc2v1 from "../../../assets/videos/svc2-1.mp4";
+import svc2v2 from "../../../assets/videos/svc2-2.mp4";
+import svc2v3 from "../../../assets/videos/svc2-3.mp4";
+import svc2v4 from "../../../assets/videos/svc2-4.mp4";
+import svc2v5 from "../../../assets/videos/svc2-5.mp4";
+import svc2v6 from "../../../assets/videos/svc2-6.mp4";
+import svc2v7 from "../../../assets/videos/svc2-7.mp4";
+import svc2v8 from "../../../assets/videos/svc2-8.mp4";
 
 
 const AccordionItem = ({ title, content, isOpen, onClick }) => {
@@ -76,7 +84,7 @@ export default function Info() {
     {/* VIDEO */}
     <div className="media-box">
       <video
-        src="https://framerusercontent.com/assets/I3QAFdiFvpCZIRT761DWGikU.mp4"
+        src={svc2v1}
         autoPlay
         loop
         muted
@@ -87,7 +95,7 @@ export default function Info() {
     {/* IMAGE */}
     <div className="media-box">
       <video
-        src="https://framerusercontent.com/assets/1kHQVfdOfa1VzDXWR5ppPXdVM.mp4"
+        src={svc2v2}
          autoPlay
         loop
         muted
@@ -115,14 +123,14 @@ export default function Info() {
 />
 </div>
 <div className="video-below-accordion">
-    <video src="https://framerusercontent.com/assets/e5re8wT569qx0aav1YT5ufmbAvY.mp4" autoPlay loop muted playsInline />
+    <video src={svc2v3} autoPlay loop muted playsInline />
 </div>
 <div className="media-row">
 
   {/* VIDEO 1 */}
   <div className="media-box">
     <video
-      src="https://framerusercontent.com/assets/SoKbr2mByivnmqFMOma1W6qtxC8.mp4"
+      src={svc2v4}
       autoPlay
       loop
       muted
@@ -133,7 +141,7 @@ export default function Info() {
   {/* VIDEO 2 */}
   <div className="media-box">
     <video
-      src="https://framerusercontent.com/assets/4cHnr0HuaWd1N9bPSJqq0H3tnU.mp4"
+      src={svc2v5}
       autoPlay
       loop
       muted
@@ -216,7 +224,7 @@ Testing systems that maintain quality across every release.
 </div>
 
 <video
-  src="https://framerusercontent.com/assets/sQsYtaGSzjqDpzo7JvKe4PDKWkc.mp4"
+  src={svc2v6}
   autoPlay
   loop
   muted
@@ -231,7 +239,7 @@ Testing systems that maintain quality across every release.
 />
 
 <video
-  src="https://framerusercontent.com/assets/DSSQjLRT3QGFesgKHp1Z7M93g1k.mp4"
+  src={svc2v7}
   autoPlay
   loop
   muted
@@ -246,7 +254,7 @@ Testing systems that maintain quality across every release.
 />
 
 <video
-  src="https://framerusercontent.com/assets/T6O00Du2BcrXsLOXN0rLE0ICJo.mp4"
+  src={svc2v8}
   autoPlay
   loop
   muted
