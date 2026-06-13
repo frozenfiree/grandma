@@ -49,7 +49,7 @@ export default function WorkWing() {
           font-size: 13px;
           font-weight: 900;
           letter-spacing: 4px;
-          color: #000000;
+          color: rgba(255, 255, 255, 0.6);
           text-transform: uppercase;
           margin-bottom: 28px;
         }
@@ -81,7 +81,7 @@ export default function WorkWing() {
           width: 12px;
           height: 12px;
           border-radius: 50%;
-          background: #000000;
+          background: #dbff00;
           display: inline-block;
           animation: podcastPulse 1.4s ease-in-out infinite;
         }

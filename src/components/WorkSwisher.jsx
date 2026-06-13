@@ -48,7 +48,7 @@ export default function WorkSwisher() {
           font-size: 13px;
           font-weight: 900;
           letter-spacing: 4px;
-          color: #000000;
+          color: rgba(255, 255, 255, 0.6);
           text-transform: uppercase;
           margin-bottom: 28px;
         }
@@ -64,7 +64,7 @@ export default function WorkSwisher() {
           font-size: clamp(18px, 2vw, 28px);
           line-height: 1.5;
           max-width: 700px;
-          color: rgba(0, 0, 0, 0.7);
+          color: rgba(255, 255, 255, 0.7);
           margin: 0 0 40px;
         }
         .podcast-status {
