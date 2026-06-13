@@ -16,6 +16,13 @@
 Coherence comes from these being **constant** across all units; only the *subject*
 of the motion/graphic changes per unit.
 
+**Operating principles (apply to every decision):**
+- The site is **whitespace-driven overall** — that never changes per unit.
+- **Optimize for relevance & coherence, not light vs dark.** A unit being darker/lighter is a *consequence* of its story, never a goal.
+- **Every asset must reinforce the story of its section.** If it doesn't, it's wrong — regardless of how nice it looks.
+- **Any medium is allowed — graphics, motion, photography, video — if it supports the narrative.** No medium is banned; irrelevance is.
+- **Never swap stock for different stock just to make a change.** A replacement only happens when it makes the section more relevant/coherent.
+
 | Dimension | The system standard |
 |---|---|
 | **Color** | Base **near-white** `#FFFFFF / #F8F9FA`; ink **near-black** `#111`; one hero accent **lime `#dbff00`**. Full **black `#000` is a deliberate "moment"** (editorial break, coming-soon), never the default. Per-unit secondary hue allowed but used in <10% of the frame. |
@@ -80,7 +87,7 @@ hint of secondary hue* change.
 3. **Shapes:** waveforms, concentric broadcast rings, mixer/fader geometry.
 4. **Type:** system; eyebrow `(PODCAST STUDIO)`.
 5. **Whitespace:** airy with a single focal waveform.
-6. **Contrast:** the **one unit where a darker "studio/booth" base is on-theme**, with lime level-meters.
+6. **Contrast:** may be the **darkest unit** in the family (studio/booth mood) — **but it stays in the family**: still whitespace-led, same type system, same lime accent, editorial restraint. It is *not* a separate dark world; think "a darker room in the same house," not a different building.
 7. **Imagery vs graphics:** **mix** — real **studio/mic photography is appropriate** here (literal production) + waveform graphics.
 8. **Overlay:** scrim; waveform sits behind text.
 9. **Color:** ink/white + lime "record/on-air" accent; a warm studio tone permitted.
