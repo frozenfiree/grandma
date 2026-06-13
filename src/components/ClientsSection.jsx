@@ -1,45 +1,80 @@
-import React, { useState } from "react";
-// import craftVid from "../assets/craft.mp4";
-// import wonderVid from "../assets/wonder.mp4";
-import courageVid from "../assets/courage.mp4";
-import curiosityVid from "../assets/cursoity.mp4";
-import attentionVid from "../assets/attention.mp4";
+import React, { useState, useRef } from "react";
+import { motion } from "framer-motion";
+import courageVid from "../assets/videos/clients-courage.mp4";
+import curiosityVid from "../assets/videos/clients-curiosity.mp4";
+import attentionVid from "../assets/videos/clients-attention.mp4";
 
 const clients = [
-  { name: "CRAFT",     },
-  { name: "WONDER",   },
-  { name: "COURAGE",   media: courageVid },
+  { name: "CRAFT" },
+  { name: "WONDER" },
+  { name: "COURAGE", media: courageVid },
   { name: "CURIOSITY", media: curiosityVid },
   { name: "ATTENTION", media: attentionVid },
 ];
 
 const ClientsSection = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [hovered, setHovered] = useState(null);
+  const [pos, setPos] = useState({ x: 0, y: 0 });
+  const ref = useRef(null);
+
+  const onMove = (e) => {
+    const r = ref.current?.getBoundingClientRect();
+    if (r) setPos({ x: e.clientX - r.left, y: e.clientY - r.top });
+  };
+
+  const activeMedia = hovered != null && !!clients[hovered].media;
 
   return (
-    <section className="clients-section">
+    <section className="clients-section" ref={ref} onMouseMove={onMove}>
       <p className="clients-label"></p>
 
-      <div className="clients-list">
-  {clients.map((client, index) => (
-    <div
-      key={index}
-      className="client-item"
-      onMouseEnter={() => setHoveredIndex(index)}
-      onMouseLeave={() => setHoveredIndex(null)}
-    >
-      <h1 className={`client-text ${hoveredIndex === index ? "active" : ""}`}>
-        {client.name}
-      </h1>
+      {/* Floating media that follows the cursor (behind the type) */}
+      <motion.div
+        className="hover-media"
+        initial={false}
+        animate={{
+          x: pos.x,
+          y: pos.y,
+          opacity: activeMedia ? 0.95 : 0,
+          scale: activeMedia ? 1 : 0.92,
+        }}
+        transition={{
+          x: { type: "spring", stiffness: 150, damping: 18 },
+          y: { type: "spring", stiffness: 150, damping: 18 },
+          opacity: { duration: 0.3 },
+          scale: { duration: 0.3 },
+        }}
+      >
+        {clients.map((c, i) =>
+          c.media ? (
+            <video
+              key={i}
+              src={c.media}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              style={{ opacity: hovered === i ? 1 : 0 }}
+            />
+          ) : null
+        )}
+      </motion.div>
 
-      {hoveredIndex === index && (
-        <div className="hover-media">
-          <video src={client.media} autoPlay loop muted playsInline />
-        </div>
-      )}
-    </div>
-  ))}
-</div>
+      <div className="clients-list">
+        {clients.map((client, index) => (
+          <div
+            key={index}
+            className="client-item"
+            onMouseEnter={() => setHovered(index)}
+            onMouseLeave={() => setHovered((h) => (h === index ? null : h))}
+          >
+            <h1 className={`client-text ${hovered === index ? "active" : ""}`}>
+              {client.name}
+            </h1>
+          </div>
+        ))}
+      </div>
 
       <style>{`
         .clients-section {
@@ -47,76 +82,57 @@ const ClientsSection = () => {
           padding: 120px 0;
           text-align: center;
           position: relative;
+          overflow: hidden;
         }
-          .clients-list {
-  position: relative;
-}
-
-.client-item {
-  position: relative;
-  z-index: 3;
-}
-
-.client-text {
-  position: relative;
-  z-index: 3;
-}
-
-        .clients-label {
-          font-size: 30px;
-          margin-bottom: 40px;
-        }
+        .clients-list { position: relative; z-index: 3; }
+        .client-item { position: relative; z-index: 3; }
+        .clients-label { font-size: 30px; margin-bottom: 40px; }
 
         .client-text {
           font-size: clamp(30px, 5vw, 100px);
           font-weight: 900;
-          margin: px 0;
+          margin: 0;
           color: #000;
           transition: all 0.3s ease;
           cursor: pointer;
         }
 
-        /* 🔥 Gradient text */
-    .client-text.active {
-  background: linear-gradient(
-    90deg,
-    #cbee1d 0%,
-    #cbee1d 70%,
-    #2f00ff 100%
-  );
-  background-size: 200% auto;
-  background-position: right center;
-  background-position: left center;
+        /* 🔥 Gradient text on hover */
+        .client-text.active {
+          background: linear-gradient(90deg, #cbee1d 0%, #cbee1d 70%, #2f00ff 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: transparent;
+        }
 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background-position 0.5s ease;
-}
-
-.client-item:hover .client-text.active {
-  background-position: right center;
-}
- 
-        /* 🔥 Floating media */
-       .hover-media {
-  position: absolute;
-  top: 50%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  width: 420px;
-  height: 280px;
-
-  z-index: 1; /* behind text */
-  pointer-events: none;
-
-  opacity: 0.9;
-}
-
-        .hover-media img,
+        /* 🔥 Floating media — follows cursor, sits behind the type */
+        .hover-media {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 420px;
+          height: 280px;
+          margin-left: -210px;   /* center on cursor */
+          margin-top: -140px;
+          border-radius: 18px;
+          overflow: hidden;
+          z-index: 1;
+          pointer-events: none;
+          will-change: transform, opacity;
+        }
         .hover-media video {
+          position: absolute;
+          inset: 0;
           width: 100%;
           height: 100%;
           object-fit: cover;
+          transition: opacity 0.3s ease;
+        }
+
+        /* hover is a desktop interaction */
+        @media (max-width: 768px) {
+          .hover-media { display: none; }
         }
       `}</style>
     </section>
