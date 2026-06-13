@@ -4,6 +4,7 @@ import { ROUTES } from '../routes';
 import { Container, Row, Col, Badge } from 'react-bootstrap';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import BrandGraphic from './BrandGraphic';
 
 // Advanced Service Card with 3D Tilt Effect
 const ServiceCard = ({ service, index, onClick }) => {
@@ -66,7 +67,18 @@ const ServiceCard = ({ service, index, onClick }) => {
         />
         
         {/* Service Image with Parallax */}
-        <div className="position-relative overflow-hidden" style={{ height: '240px' }}>
+        <div className="position-relative overflow-hidden" style={{ height: '240px', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
+          {service.graphic ? (
+            <motion.div
+              className="w-100 h-100"
+              style={{ position: 'absolute', inset: 0 }}
+              animate={{ scale: isHovered ? 1.05 : 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <BrandGraphic motif={service.graphic} />
+            </motion.div>
+          ) : (
+          <>
           <motion.img
             src={service.image}
             alt={service.title}
@@ -88,26 +100,8 @@ const ServiceCard = ({ service, index, onClick }) => {
               transition: 'opacity 0.3s ease'
             }}
           />
-
-          {/* Animated Service Icon */}
-          <motion.div
-            className="position-absolute bottom-0 start-0 m-3 d-flex align-items-center justify-content-center"
-            style={{
-              width: '55px',
-              height: '55px',
-              background: `linear-gradient(135deg, ${service.color}, ${service.color}80)`,
-              borderRadius: '16px',
-              fontSize: '28px',
-              boxShadow: `0 4px 15px ${service.color}40`
-            }}
-            animate={{
-              rotate: isHovered ? 360 : 0,
-              scale: isHovered ? 1.1 : 1
-            }}
-            transition={{ duration: 0.5 }}
-          >
-            {service.icon}
-          </motion.div>
+          </>
+          )}
         </div>
 
         {/* Service Content */}
@@ -395,6 +389,7 @@ const ServicesPage = () => {
     // Your services array here (same as before)
     {
       id: 1,
+      graphic: 'orbit',
       title: '3D Motion Art',
       shortDesc: 'Stunning 3D animations that bring your brand to life',
       fullDesc: 'We create breathtaking 3D motion graphics that captivate audiences and elevate your brand story.',
@@ -406,6 +401,7 @@ const ServicesPage = () => {
     },
     {
       id: 2,
+      graphic: 'funnel',
       title: 'Digital Strategy',
       shortDesc: 'Data-driven strategies for digital success',
       fullDesc: 'Our digital strategists work with you to develop comprehensive plans that align with your business goals.',
@@ -417,6 +413,7 @@ const ServicesPage = () => {
     },
     {
       id: 3,
+      graphic: 'wireframe',
       title: 'UI/UX Design',
       shortDesc: 'Intuitive interfaces that users love',
       fullDesc: 'We design beautiful, user-centered interfaces that are both functional and aesthetically pleasing.',
@@ -428,6 +425,7 @@ const ServicesPage = () => {
     },
     {
       id: 4,
+      graphic: 'mesh',
       title: 'WebGL Development',
       shortDesc: 'Interactive 3D web experiences',
       fullDesc: 'Leverage the power of WebGL to create stunning 3D experiences directly in the browser.',
@@ -439,6 +437,7 @@ const ServicesPage = () => {
     },
     {
       id: 5,
+      graphic: 'ripple',
       title: 'Interactive Experiences',
       shortDesc: 'Engaging interactive digital solutions',
       fullDesc: 'Create memorable interactive experiences that engage users and drive conversions.',
@@ -450,6 +449,7 @@ const ServicesPage = () => {
     },
     {
       id: 6,
+      graphic: 'glyph',
       title: 'Brand Identity',
       shortDesc: 'Unique brand identities that stand out',
       fullDesc: 'Build a strong brand identity that resonates with your audience.',
@@ -461,6 +461,7 @@ const ServicesPage = () => {
     },
     {
       id: 7,
+      graphic: 'phone',
       title: 'Mobile App Development',
       shortDesc: 'Native and cross-platform mobile apps',
       fullDesc: 'Develop high-performance mobile applications for iOS and Android.',
@@ -472,6 +473,7 @@ const ServicesPage = () => {
     },
     {
       id: 8,
+      graphic: 'grid',
       title: 'E-commerce Solutions',
       shortDesc: 'Powerful online stores that sell',
       fullDesc: 'Build feature-rich e-commerce platforms that drive sales and provide seamless shopping experiences.',
@@ -483,6 +485,7 @@ const ServicesPage = () => {
     },
     {
       id: 9,
+      graphic: 'neural',
       title: 'AI & Machine Learning',
       shortDesc: 'Intelligent solutions powered by AI',
       fullDesc: 'Harness the power of artificial intelligence to automate processes, gain insights, and deliver personalized experiences.',
@@ -494,6 +497,7 @@ const ServicesPage = () => {
     },
     {
       id: 10,
+      graphic: 'cloud',
       title: 'Cloud Solutions',
       shortDesc: 'Scalable cloud infrastructure and services',
       fullDesc: 'Migrate and manage your infrastructure on the cloud for better scalability, security, and cost-efficiency.',

@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import useLazyVideo from './useLazyVideo';
+import BrandGraphic from './BrandGraphic';
 
-const WorkCard = ({ title, description, category, video, link }) => {
+const WorkCard = ({ title, description, category, video, graphic, link }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const cardRef = useRef(null);
@@ -69,6 +70,15 @@ const WorkCard = ({ title, description, category, video, link }) => {
 >
   <div className="wc-wrap">
     <div className="wc-video-box">
+      {graphic ? (
+        <motion.div
+          style={{ position: 'absolute', inset: 0 }}
+          animate={{ scale: isHovered ? 1.04 : 1 }}
+          transition={{ duration: 0.4, ease: 'easeInOut' }}
+        >
+          <BrandGraphic motif={graphic} />
+        </motion.div>
+      ) : (
       <motion.video
         ref={videoRef}
         data-src={video}
@@ -78,6 +88,7 @@ const WorkCard = ({ title, description, category, video, link }) => {
         animate={{ scale: isHovered ? 1.08 : 1 }}
         transition={{ duration: 0.4, ease: 'easeInOut' }}
       />
+      )}
     </div>
 
     <div

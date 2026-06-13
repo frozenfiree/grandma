@@ -16,6 +16,7 @@ const workItems = [
   description: 'A powerful CRM platform that helps businesses manage customer relationships, streamline sales pipelines, automate workflows, and drive growth through actionable insights.',
   category: 'CRM Platform',
   video: UIUX2,
+  graphic: 'nodes',
   link: ROUTES.SERVICE_1
 },
   {
@@ -24,6 +25,7 @@ const workItems = [
   description: 'A project focused on simplifying management.',
   category: 'Management Platform',
   video: sigTech,
+  graphic: 'modules',
   link: ROUTES.WORK
 },
 
@@ -33,6 +35,7 @@ const workItems = [
   description: 'Five vertical newsrooms , MarTech, FinTech, HRTech, CyberTech, SalesTech',
   category: 'Media Network',
   video: sigEditorial,
+  graphic: 'publishing',
   link: ROUTES.WORK_WING
 },
 
@@ -42,6 +45,7 @@ const workItems = [
   description: 'Our studio is warming up. Launching soon!',
   category: 'Coming Soon',
   video: podcast,
+  graphic: 'waveform',
   link: ROUTES.WORK_SWISHER
 }
 ];

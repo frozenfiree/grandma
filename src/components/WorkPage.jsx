@@ -16,10 +16,11 @@ import sigAbstract from "../assets/videos/signature-abstract-loop.mp4";
   description: 'A powerful CRM platform that helps businesses manage customer relationships, streamline sales pipelines, automate workflows, and drive growth through actionable insights.',
   category: 'CRM Platform',
   video: sigAbstract,
+  graphic: 'nodes',
   link: ROUTES.SERVICE_1
 },
-    { id: 2, title: 'GTM Publications',     description: 'Five vertical newsrooms , MarTech, FinTech, HRTech, CyberTech, SalesTech',    category: 'Media Network',            video: sigEditorial, link: ROUTES.WORK_WING    },
-    { id: 3, title: 'Podcast Studio',  description: 'Our studio is warming up. Launching soon!',         category: 'Coming Soon',            video: podcast,          link: ROUTES.WORK_SWISHER },
+    { id: 2, title: 'GTM Publications',     description: 'Five vertical newsrooms , MarTech, FinTech, HRTech, CyberTech, SalesTech',    category: 'Media Network',            video: sigEditorial, graphic: 'publishing', link: ROUTES.WORK_WING    },
+    { id: 3, title: 'Podcast Studio',  description: 'Our studio is warming up. Launching soon!',         category: 'Coming Soon',            video: podcast, graphic: 'waveform', link: ROUTES.WORK_SWISHER },
   ];
 
   // ─── WorkPage ─────────────────────────────────────────────────────────────────
