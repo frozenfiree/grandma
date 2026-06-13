@@ -26,7 +26,7 @@ const workItems = [
   category: 'Management Platform',
   video: sigTech,
   graphic: 'modules',
-  link: ROUTES.WORK
+  link: ROUTES.WORK_FANTOM
 },
 
 {

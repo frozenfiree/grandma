@@ -68,7 +68,7 @@ useEffect(() => {
 
       <div className="about-extra-bottom">
         <p>
-         Grandmas Hive is a modern marketing studio built around execution. 
+         Grandma's Hive is a modern marketing studio built around execution.
          Part creative studio. Part production company. Part growth partner. 
           One team responsible for strategy, production and delivery. 
         </p>

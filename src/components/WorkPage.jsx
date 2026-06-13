@@ -21,6 +21,7 @@ import sigAbstract from "../assets/videos/signature-abstract-loop.mp4";
 },
     { id: 2, title: 'GTM Publications',     description: 'Five vertical newsrooms , MarTech, FinTech, HRTech, CyberTech, SalesTech',    category: 'Media Network',            video: sigEditorial, graphic: 'publishing', link: ROUTES.WORK_WING    },
     { id: 3, title: 'Podcast Studio',  description: 'Our studio is warming up. Launching soon!',         category: 'Coming Soon',            video: podcast, graphic: 'waveform', link: ROUTES.WORK_SWISHER },
+    { id: 4, title: 'Simplified Management', description: 'A project focused on simplifying management.', category: 'Management Platform', graphic: 'modules', link: ROUTES.WORK_FANTOM },
   ];
 
   // ─── WorkPage ─────────────────────────────────────────────────────────────────
@@ -44,6 +45,12 @@ import sigAbstract from "../assets/videos/signature-abstract-loop.mp4";
           <div className="work-item-3">
             <motion.div initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} viewport={{ once: true }}>
               <WorkCard {...workItems[2]} />
+            </motion.div>
+          </div>
+
+          <div className="work-item-4">
+            <motion.div initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }} viewport={{ once: true }}>
+              <WorkCard {...workItems[3]} />
             </motion.div>
           </div>
 

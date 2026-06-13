@@ -392,7 +392,7 @@ export default function Footer() {
           <div className="family-text">
             We're part of the{" "}
             <span className="family-link">
-                Grandma Hives
+                Grandma's Hive
             </span>{" "}
             collective.
           </div>
