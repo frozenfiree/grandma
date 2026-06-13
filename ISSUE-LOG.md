@@ -16,16 +16,6 @@
 - **Evidence:** `src/components/AboutSection.jsx:168` (`<video src={UIUX2}>` → overlay "UI UX DESIGN"), `:181` (`<video src={MortionGrandma}>` → "3D MOTION ART"). Frame extracts confirm skateboard / skate-park content.
 - **Suggested fix:** Replace these two cards' sources with relevant, on-brand footage (interface/craft for UI/UX; real motion-design output for 3D) consistent with the rest of the motion system, or retire the AboutSection card grid if it duplicates the Selected Work section.
 
-### ISS-002 · High · Work → Simplified Management (`WorkFantom`)
-- **Description:** The eyebrow label "(SIMPLIFIED MANAGEMENT)" is set to pure black on a pure-black background, making it invisible. The component appears to be a leftover from a light-theme layout converted to a black hero without updating the text colour.
-- **Evidence:** `src/components/WorkFantom.jsx:33` `background: #000;` vs `:52` `.podcast-eyebrow { color: #000000; }`.
-- **Suggested fix:** Set `.podcast-eyebrow` colour to a visible value (e.g. `rgba(255,255,255,0.6)` to match the subtitle treatment).
-
-### ISS-003 · Medium · Work → Simplified Management (`WorkFantom`)
-- **Description:** The "COMING SOON" status pulse dot is black-on-black and therefore invisible; only the text renders, so the intended live-status affordance is lost.
-- **Evidence:** `src/components/WorkFantom.jsx:84` `.podcast-dot { background: #000000; }` on the `#000` section.
-- **Suggested fix:** Give the dot a visible accent colour (the site's neon/blue accent, or white).
-
 ### ISS-004 · Critical · Contact page (deployment)
 - **Description:** The contact form POSTs to `/api/contact`, a Vercel serverless function that hard-depends on `process.env.RESEND_API_KEY` and `process.env.MONGO_URI`. On any host without those env vars (or on a static/SPA preview where `/api/contact` falls through the rewrite to `index.html`), submissions fail. This blocks the only lead-capture path on the site.
 - **Evidence:** `api/contact.js:5` `new Resend(process.env.RESEND_API_KEY)`, `:22` `mongoose.connect(process.env.MONGO_URI)`; `src/components/ContactPage.jsx:42` `fetch('/api/contact')`; `vercel.json` SPA rewrite excludes only `/api/`.
@@ -103,6 +93,20 @@
 
 ---
 
+## Resolved
+
+### ISS-002 · High · Work → Simplified Management (`WorkFantom`) — RESOLVED 2026-06-13 (commit `fb1aa77`)
+- Eyebrow "(SIMPLIFIED MANAGEMENT)" was black-on-black (invisible). Root cause: light-theme `.podcast-*` styles reused on a `#000` hero. Fixed `.podcast-eyebrow` → `rgba(255,255,255,0.6)`. Verified visible on desktop + mobile.
+- The same regression was found and fixed on the two sibling coming-soon pages: **WorkWing** ("(GTM PUBLICATIONS)") and **WorkSwisher** ("(THE PODCAST)"). WorkSwisher additionally had an invisible subtitle (`rgba(0,0,0,0.7)` on black) — fixed to `rgba(255,255,255,0.7)`.
+
+### ISS-003 · Medium · Work coming-soon pages — RESOLVED 2026-06-13 (commit `fb1aa77`)
+- "COMING SOON" status pulse dot was black-on-black on WorkFantom and WorkWing. Fixed `.podcast-dot` → `#dbff00` (matching the already-correct WorkSwisher dot). Verified visible.
+
 ## Discovery status
 
-Discovery has reached **diminishing returns**: the latest sweep surfaced only low-severity hygiene items (ISS-014→018) on top of the already-captured content/a11y/SEO/deployment issues. Highest-value items to triage first: **ISS-004** (contact endpoint), **ISS-001** (off-brand homepage footage), **ISS-002** (invisible label), **ISS-005** (SEO/social), **ISS-009** (Framer-hosted fonts). Per audit-mode constraints, none of the above were fixed.
+Discovery has reached **diminishing returns**: the latest sweep surfaced only low-severity hygiene items (ISS-014→018) on top of the already-captured content/a11y/SEO/deployment issues. A full link & navigation audit (primary nav, footer, homepage CTAs, work/service cards, internal links, mobile nav, deep routes) found **no broken links and no incorrect destinations** — every route resolves; legacy `href="/work"` links work via `LegacyRedirectGuard`. Remaining highest-value items to triage: **ISS-004** (contact endpoint, explicitly deferred), **ISS-001** (off-brand homepage footage, explicitly deferred), **ISS-005** (SEO/social), **ISS-009** (Framer-hosted fonts).
+
+### Navigation notes (not broken — no fix applied)
+- **Homepage "Let's raise the standard →" CTA** (`WorkSection.jsx`): styled as a clickable CTA (pointer cursor, arrow) but has no `onClick`/`href`, so it navigates nowhere. Not a broken *link* (it is not a link element); destination is ambiguous (Contact vs Work). Flagged for a product decision rather than fixed.
+- **Footer:** contains no navigation links by design; `hello@grandmashive.com` is plain text (not a `mailto:`) and the `GRANDMASHIVE.COM` button is inert. Enhancement opportunities, not broken links.
+- **No `*` 404 route** in `App.jsx`: unknown URLs render a blank page (Navbar + Footer only). Adding a 404 page is recommended but constitutes navigation structure, so deferred per "do not restructure navigation."
