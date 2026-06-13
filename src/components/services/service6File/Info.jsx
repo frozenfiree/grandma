@@ -1,5 +1,13 @@
 import React, { useState } from "react";
 import "../serviceMobile.css";
+import svc6type1 from "../../../assets/videos/svc6-type1.mp4";
+import svc6type2 from "../../../assets/videos/svc6-type2.mp4";
+import svc6type3 from "../../../assets/videos/svc6-type3.mp4";
+import svc6craft from "../../../assets/videos/svc-brand.mp4";
+import svc6still1 from "../../../assets/img/svc6-still-1.webp";
+import svc6still2 from "../../../assets/img/svc6-still-2.webp";
+import svc6still3 from "../../../assets/img/svc6-still-3.webp";
+import svc6still4 from "../../../assets/img/svc6-still-4.webp";
 
 const AccordionItem = ({ title, content, isOpen, onClick }) => (
   <div className="accordion-item">
@@ -58,7 +66,7 @@ export default function Info() {
       `}</style>
 
       <div className="video-section">
-        <video src="https://framerusercontent.com/assets/8T687CnVXgzAbw0ZlMG4PYpNZvA.mp4" autoPlay loop muted playsInline />
+        <video src={svc6type1} autoPlay loop muted playsInline />
       </div>
 
       <div className="accordion-container">
@@ -77,29 +85,29 @@ export default function Info() {
       </div>
 
       <div className="media-section">
-        <div className="box box1"><video src="https://framerusercontent.com/assets/CfVFFKDBmQ4BdjfIfTpO6QkDpac.mp4" autoPlay loop muted playsInline /></div>
-        <div className="box"><video src="https://framerusercontent.com/assets/caIjYD0KXJKChrXFsyF2eAf6Y8.mp4" autoPlay loop muted playsInline /></div>
+        <div className="box box1"><video src={svc6type2} autoPlay loop muted playsInline /></div>
+        <div className="box"><video src={svc6craft} autoPlay loop muted playsInline /></div>
       </div>
 
 
 <div className="image-row">
   <div className="image-box">
     <img
-      src="https://framerusercontent.com/images/7uZR4bo2j2YiId6NOCzuRXgx0.jpg"
+      src={svc6still1}
       alt="img1"
     />
   </div>
 
   <div className="image-box">
     <img
-      src="https://framerusercontent.com/images/i5gXTBvHUBw5JvIxSyw8LFCbHe8.jpg"
+      src={svc6still2}
       alt="img2"
     />
   </div>
 
   <div className="image-box">
     <img
-      src="https://framerusercontent.com/images/WHZogu5hG0xw9HiM7v66JUvNFM.jpg"
+      src={svc6still3}
       alt="img3"
     />
   </div>
@@ -157,7 +165,7 @@ export default function Info() {
 
   <div className="industry-right">
     <img
-      src="https://framerusercontent.com/images/Rl9KFLV8elPaZaSaGzeMhD2zw.jpg"
+      src={svc6still4}
       alt="Industry"
     />
   </div>
@@ -241,7 +249,7 @@ export default function Info() {
 </div>
       <div className="grid-section">
         <div className="grid-row">
-          <div className="grid-item"><video src="https://framerusercontent.com/assets/dXntldYfMbIZn6N3QQHNnsP7v5Q.mp4" autoPlay loop muted playsInline /></div>
+          <div className="grid-item"><video src={svc6type3} autoPlay loop muted playsInline /></div>
           
         </div>
         

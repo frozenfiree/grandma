@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from '../../../routes';
 import "../serviceMobile.css";
+import svc6type1 from "../../../assets/videos/svc6-type1.mp4";
 function Name() {
   const navigate = useNavigate();
   useEffect(() => {
@@ -47,7 +48,7 @@ function Name() {
         <div className="video-section">
           <div className="w-[500px] h-[200px] overflow-hidden rounded-xl shadow-lg bg-black relative">
             <video
-              src="https://framerusercontent.com/assets/OwOLGrA0k8eGBFJqXhNmfnXm784.mp4"
+              src={svc6type1}
               autoPlay loop muted playsInline
               style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", top: 0, left: 0 }}
             />
