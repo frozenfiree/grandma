@@ -6,6 +6,7 @@ import MortionGrandma from "../assets/3dMortionGrandma.mp4";
 import Home1 from "../assets/Home1.mp4";
 import podcast from "../assets/podcast.mp4";
 import sigEditorial from "../assets/videos/signature-editorial-loop.mp4";
+import sigTech from "../assets/videos/signature-tech-loop.mp4";
 import { ROUTES } from '../routes';
 
 const workItems = [
@@ -22,7 +23,7 @@ const workItems = [
   title: 'Simplified Management',
   description: 'A project focused on simplifying management.',
   category: 'Management Platform',
-  video: Home1,
+  video: sigTech,
   link: ROUTES.WORK
 },
 

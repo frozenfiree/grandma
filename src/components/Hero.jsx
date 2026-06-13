@@ -191,8 +191,8 @@ useEffect(() => {
         {/* Marquee overlay - Mobile Only */}
         <div className="hero-marquee-wrapper">
           <div className="hero-marquee-track">
-            <div className="hero-marquee-text">MAKE LOVE MAKE LOVE MAKE LOVE MAKE LOVE</div>
-            <div className="hero-marquee-text">MAKE LOVE MAKE LOVE MAKE LOVE MAKE LOVE</div>
+            <div className="hero-marquee-text">MARKETING ✦ STRATEGY ✦ DESIGN ✦ TECHNOLOGY ✦</div>
+            <div className="hero-marquee-text">MARKETING ✦ STRATEGY ✦ DESIGN ✦ TECHNOLOGY ✦</div>
           </div>
         </div>
       </div>
