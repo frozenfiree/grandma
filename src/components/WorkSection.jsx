@@ -4,33 +4,42 @@ import WorkCard from './WorkCard';
 import UIUX2 from "../assets/UIUX2.mp4";
 import MortionGrandma from "../assets/3dMortionGrandma.mp4";
 import Home1 from "../assets/Home1.mp4";
+import podcast from "../assets/podcast.mp4";
 import { ROUTES } from '../routes';
 
 const workItems = [
   {
   id: 1,
-  title: 'UI UX DESIGN',
-  description: 'Intuitive digital experiences crafted with user-centered design',
-  category: 'Marketing Website & Ecommerce',
+  title: 'Gaandiva OS',
+  description: 'A powerful CRM platform that helps businesses manage customer relationships, streamline sales pipelines, automate workflows, and drive growth through actionable insights.',
+  category: 'CRM Platform',
   video: UIUX2,
-  link: ROUTES.WORK_FANTOM
+  link: ROUTES.SERVICE_1
 },
   {
   id: 2,
-  title: '3D MOTION ART',
-  description: 'Immersive visual storytelling through dynamic 3D motion design',
-  category: 'Marketing Website',
-  video:MortionGrandma ,
-  
-  link: ROUTES.WORK_WING
+  title: 'Simplified Management',
+  description: '',
+  category: '',
+  video: Home1,
+  link: ROUTES.WORK
 },
 
 {
   id: 3,
-  title: 'DIGITAL STRATEGY',
-  description: 'Strategic digital solutions built to elevate brand growth',
-  category: 'Marketing Website',
-  video: Home1,
+  title: 'GTM Publications',
+  description: 'Five vertical newsrooms , MarTech, FinTech, HRTech, CyberTech, SalesTech',
+  category: 'Media Network',
+  video: MortionGrandma,
+  link: ROUTES.WORK_WING
+},
+
+{
+  id: 4,
+  title: 'Podcast Studio',
+  description: 'Our stuido is warming up. Launching soon!',
+  category: 'Coming Soon',
+  video: podcast,
   link: ROUTES.WORK_SWISHER
 }
 ];

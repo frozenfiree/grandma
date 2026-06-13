@@ -267,7 +267,7 @@ body::-webkit-scrollbar {
          <div className="marquee-wrapper">
           <div className="marquee-track">
             <div className="marquee-text">
-             GTM OS GTM OS GTM OS GTM OS GTM OS GTM OS GTM OS GTM OS GTM OS GTM OS GTM OS
+             Gaandiva OS Gaandiva OS Gaandiva OS Gaandiva OS Gaandiva OS Gaandiva OS Gaandiva OS Gaandiva OS
             </div>
          
           </div>
