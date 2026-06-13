@@ -8,6 +8,8 @@ import React, { useState } from "react";
 import planevideo from "../../../assets/planevideo.mp4";
 import "../serviceMobile.css";
 import serviceMedia from "../../../assets/serveice1div.png";
+import svc1still1 from "../../../assets/img/svc1-still-1.webp";
+import svc1still2 from "../../../assets/img/svc1-still-2.webp";
 
 const AccordionItem = ({ title, content, isOpen, onClick }) => {
   return (
@@ -411,7 +413,7 @@ body::-webkit-scrollbar {
   {/* Row 1 */}
   <div className="grid-row">
     <div className="grid-item">
-      <img src="https://framerusercontent.com/images/WPnN1bXlI8hOpc96IKRxQZk9U.png?scale-down-to=2048" alt="img1" />
+      <img src={svc1still1} alt="img1" />
     </div>
 
     <div className="grid-item tall">
@@ -438,7 +440,7 @@ body::-webkit-scrollbar {
     </div>
 
     <div className="grid-item">
-      <img src="https://framerusercontent.com/images/PBThWAzr9w5Ow1UuyZcdyzv2Xdg.png?scale-down-to=2048" alt="img2" />
+      <img src={svc1still2} alt="img2" />
     </div>
   </div>
 </div>
