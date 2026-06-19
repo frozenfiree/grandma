@@ -1,65 +1,156 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Container, Section, Overline, Heading, Deck, Rule } from "@/components/primitives";
+import { Cta } from "@/components/cta";
+import { Metric } from "@/components/metric";
+import { PRIMARY_CTA, ROUTES } from "@/lib/routes";
+import {
+  LEAD_THESIS,
+  CATEGORY_LINE,
+  MOVEMENT,
+  BRAND_WRAPPER,
+  HOME_NUMBER,
+  PILLARS,
+} from "@/lib/content";
 
-export default function Home() {
+// HOME — category gate + router + self-qualifier. Never gates proof. Existence
+// proof + ONE number. One dominant CTA → /start. Warmth lands LAST.
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      {/* S1 — Category gate */}
+      <Section className="pt-16 sm:pt-24">
+        <Container className="flex flex-col gap-8">
+          <Overline>The owned-engine operating partner</Overline>
+          <Heading level={1} size="display-xl" className="max-w-[18ch]">
+            {LEAD_THESIS}
+          </Heading>
+          <Deck>{CATEGORY_LINE}</Deck>
+          <div className="flex flex-wrap items-center gap-4">
+            <Cta href={PRIMARY_CTA.href}>{PRIMARY_CTA.label}</Cta>
+            <Cta href={ROUTES.HOW_WE_WORK} variant="quiet">
+              How we work
+            </Cta>
+          </div>
+        </Container>
+      </Section>
+
+      {/* S2 — Existence proof + the ONE number */}
+      <Section className="bg-paper-pure border-y border-rule">
+        <Container className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+          <div className="flex flex-col gap-5">
+            <Overline>Proof, not promises</Overline>
+            <Heading size="display-l">We eat our own cooking.</Heading>
+            <Deck>
+              We don&rsquo;t just advise on the build — we ship our own. Gaandiva
+              OS, our CRM, runs live today. That&rsquo;s why we can build yours.
+            </Deck>
+            <Cta href={ROUTES.PROOF} variant="secondary" className="self-start">
+              See the proof
+            </Cta>
+          </div>
+          <div className="rounded-lg border border-rule bg-paper p-8">
+            <Metric claim={HOME_NUMBER} size="metric-xl" />
+          </div>
+        </Container>
+      </Section>
+
+      {/* S3 — Self-qualify router */}
+      <Section>
+        <Container className="flex flex-col gap-10">
+          <div className="flex flex-col gap-3">
+            <Overline>Where to go next</Overline>
+            <Heading size="headline">Pick the path that fits you.</Heading>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {[
+              {
+                label: "See the proof",
+                desc: "The live demo, the numbers, the receipts.",
+                href: ROUTES.PROOF,
+                dominant: false,
+              },
+              {
+                label: "How we work",
+                desc: "The operating model, the pillars, what you keep.",
+                href: ROUTES.HOW_WE_WORK,
+                dominant: false,
+              },
+              {
+                label: "Start a conversation",
+                desc: "A scoped fit conversation — a diagnostic, not a pitch.",
+                href: ROUTES.START,
+                dominant: true,
+              },
+            ].map((card) => (
+              <Link
+                key={card.href}
+                href={card.href}
+                className={
+                  "group flex flex-col gap-2 rounded-lg border p-6 transition-colors " +
+                  (card.dominant
+                    ? "border-accent/40 bg-accent-weak hover:border-accent"
+                    : "border-rule bg-paper-pure hover:border-ink/30")
+                }
+              >
+                <span className="text-title font-semibold">
+                  {card.label}{" "}
+                  <span
+                    aria-hidden
+                    className="inline-block transition-transform group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </span>
+                <span className="text-small text-ink-700">{card.desc}</span>
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* S4 — Methodology strip (BUILD weighted) */}
+      <Section className="bg-paper-pure border-y border-rule">
+        <Container className="flex flex-col gap-8">
+          <Overline>How we operate</Overline>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {PILLARS.map((p, i) => (
+              <div
+                key={p.key}
+                className={
+                  "flex flex-col gap-2 rounded-lg border p-5 " +
+                  (p.emphasized ? "border-ink/30 bg-paper" : "border-rule bg-paper")
+                }
+              >
+                <span className="text-overline font-mono text-ink-500 tnum">
+                  0{i + 1}
+                </span>
+                <span className="text-title font-semibold">{p.name}</span>
+                <span className="text-small text-ink-700">{p.definition}</span>
+              </div>
+            ))}
+          </div>
+          <Cta href={ROUTES.HOW_WE_WORK} variant="quiet" className="self-start">
+            See the full operating model
+          </Cta>
+        </Container>
+      </Section>
+
+      {/* S5 — Brand close (warmth, LATE) */}
+      <Section>
+        <Container className="flex flex-col items-start gap-6">
+          <Rule className="w-16" />
+          <Heading size="display-l" className="font-serif max-w-[20ch]">
+            {MOVEMENT}
+          </Heading>
+          <Deck>{BRAND_WRAPPER}</Deck>
+          <div className="flex flex-wrap items-center gap-4">
+            <Cta href={PRIMARY_CTA.href}>{PRIMARY_CTA.label}</Cta>
+            <Cta href={ROUTES.PROOF} variant="quiet">
+              Or see the proof first
+            </Cta>
+          </div>
+        </Container>
+      </Section>
+    </>
   );
 }
