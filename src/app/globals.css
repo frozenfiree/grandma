@@ -1,29 +1,31 @@
 @import "tailwindcss";
 
 /*
-  GRANDMA'S HIVE — Design Tokens (Creative Direction B "House Publisher")
-  Proof-first editorial system. Warm-neutral base, ONE reserved accent,
-  semantic Live/In-Progress/Planned states distinguishable by hue + treatment.
-  Font/color picks are the locked "proposed" starting set; final at build QA.
+  GRANDMA'S HIVE — Design Tokens v2 "Bold Editorial"
+  Proof-first editorial system, dialed up: large-format scale, assertive accent,
+  dark dramatic punctuation, strong-but-disciplined motion. Direction B.
 */
 
 @theme {
   /* ---- Color: the publication ---- */
-  --color-paper: #faf8f4; /* primary background — warm off-white */
-  --color-paper-pure: #ffffff; /* card / exhibit surfaces */
-  --color-ink: #16140f; /* primary text — warm near-black */
-  --color-ink-700: #3a362e; /* secondary text */
-  --color-ink-500: #6b665c; /* tertiary / captions / metadata */
-  --color-rule: #e3ded4; /* hairlines, borders, dividers */
-  --color-surface-dark: #14110c; /* inverted sections (punctuation) */
-  --color-paper-on-dark: #f2eee6; /* text on dark */
+  --color-paper: #faf8f4;
+  --color-paper-pure: #ffffff;
+  --color-ink: #16140f;
+  --color-ink-700: #3a362e;
+  --color-ink-500: #6b665c;
+  --color-rule: #e3ded4;
+  --color-surface-dark: #14110c;
+  --color-surface-dark-2: #221d15;
+  --color-paper-on-dark: #f4f0e8;
+  --color-ink-on-dark-500: #a8a194;
 
-  /* ---- Accent: ONE, reserved (single CTA + live/active/proof) ---- */
-  --color-accent: #c2410c; /* ember */
-  --color-accent-ink: #9a330a; /* darker ember for small accent text (AA) */
+  /* ---- Accent: ONE, reserved, used ASSERTIVELY ---- */
+  --color-accent: #d4380d; /* ember — louder than v1 */
+  --color-accent-ink: #9a330a;
+  --color-accent-bright: #ff5a1f; /* on-dark accent */
   --color-accent-weak: #fbeae0;
 
-  /* ---- Semantic: build states (always hue + treatment, never color-only) ---- */
+  /* ---- Semantic build states (hue + treatment, never color alone) ---- */
   --color-live: #1e7f4f;
   --color-live-weak: #e6f2ec;
   --color-progress: #b8860b;
@@ -31,24 +33,31 @@
   --color-planned: #6b665c;
   --color-planned-weak: #efece6;
 
+  /* ---- Elevation (exhibits get depth, not just hairlines) ---- */
+  --shadow-exhibit: 0 1px 2px rgba(22, 20, 15, 0.04), 0 18px 40px -16px rgba(22, 20, 15, 0.18);
+  --shadow-lift: 0 1px 2px rgba(22, 20, 15, 0.04), 0 24px 56px -20px rgba(22, 20, 15, 0.24);
+
   /* ---- Type families ---- */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
   --font-mono: var(--font-jetbrains), ui-monospace, "SFMono-Regular", monospace;
 
-  /* ---- Type scale (fluid; named steps) ---- */
-  --text-display-xl: clamp(2.5rem, 1.6rem + 4vw, 4.5rem);
-  --text-display-xl--line-height: 1.02;
-  --text-display-xl--letter-spacing: -0.02em;
-  --text-display-l: clamp(2rem, 1.4rem + 2.6vw, 3.25rem);
-  --text-display-l--line-height: 1.05;
+  /* ---- Type scale (large-format; fluid) ---- */
+  --text-mega: clamp(3.25rem, 1.6rem + 7.4vw, 8rem);
+  --text-mega--line-height: 0.92;
+  --text-mega--letter-spacing: -0.03em;
+  --text-display-xl: clamp(2.75rem, 1.7rem + 4.6vw, 5.75rem);
+  --text-display-xl--line-height: 0.98;
+  --text-display-xl--letter-spacing: -0.025em;
+  --text-display-l: clamp(2.125rem, 1.4rem + 3vw, 3.75rem);
+  --text-display-l--line-height: 1.02;
   --text-display-l--letter-spacing: -0.02em;
-  --text-headline: clamp(1.625rem, 1.3rem + 1.4vw, 2.25rem);
-  --text-headline--line-height: 1.1;
-  --text-headline--letter-spacing: -0.01em;
-  --text-title: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
-  --text-title--line-height: 1.2;
-  --text-deck: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  --text-headline: clamp(1.75rem, 1.3rem + 1.8vw, 2.75rem);
+  --text-headline--line-height: 1.08;
+  --text-headline--letter-spacing: -0.015em;
+  --text-title: clamp(1.3rem, 1.1rem + 0.7vw, 1.6rem);
+  --text-title--line-height: 1.18;
+  --text-deck: clamp(1.1875rem, 1rem + 0.7vw, 1.5rem);
   --text-deck--line-height: 1.5;
   --text-body: 1.0625rem;
   --text-body--line-height: 1.6;
@@ -58,14 +67,26 @@
   --text-caption--line-height: 1.45;
   --text-overline: 0.75rem;
   --text-overline--line-height: 1;
-  --text-overline--letter-spacing: 0.14em;
-  --text-metric-xl: clamp(2.75rem, 1.8rem + 4.2vw, 5rem);
-  --text-metric-xl--line-height: 0.95;
-  --text-metric: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
+  --text-overline--letter-spacing: 0.16em;
+  --text-metric-xl: clamp(3.5rem, 2rem + 6vw, 7rem);
+  --text-metric-xl--line-height: 0.9;
+  --text-metric: clamp(2rem, 1.5rem + 2vw, 3rem);
   --text-metric--line-height: 1;
+
+  /* ---- Motion keyframes (disciplined; transform/opacity only) ---- */
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-shimmer: shimmer 2.2s ease-in-out infinite;
 }
 
-/* Warm-neutral base. No auto dark-mode: brand is paper/ink editorial. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes shimmer {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
 html {
   background: var(--color-paper);
   color: var(--color-ink);
@@ -80,22 +101,23 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Numbers/data always use lining tabular figures so values never jitter. */
+/* Page-transition: a subtle "turn the page" fade-up on each route. */
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.page-in {
+  animation: pageIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 .tnum {
   font-variant-numeric: tabular-nums lining-nums;
   font-feature-settings: "tnum" 1, "lnum" 1;
 }
+.measure { max-width: 42rem; }
 
-/* Editorial reading measure for long-form text. */
-.measure {
-  max-width: 42rem;
-}
-
-/* Reduced motion: honored globally; motion is never load-bearing. */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -103,7 +125,4 @@ body {
   }
 }
 
-::selection {
-  background: var(--color-accent-weak);
-  color: var(--color-ink);
-}
+::selection { background: var(--color-accent); color: #fff; }

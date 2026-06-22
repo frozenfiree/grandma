@@ -44,20 +44,71 @@ export function Heading({
 }: {
   children: React.ReactNode;
   level?: 1 | 2 | 3;
-  size?: "display-xl" | "display-l" | "headline" | "title";
+  size?: "mega" | "display-xl" | "display-l" | "headline" | "title";
   className?: string;
 }) {
   const Tag = `h${level}` as const;
   const sizeClass = {
+    mega: "text-mega",
     "display-xl": "text-display-xl",
     "display-l": "text-display-l",
     headline: "text-headline",
     title: "text-title",
   }[size];
   return (
-    <Tag className={cn("font-sans font-semibold text-balance", sizeClass, className)}>
+    <Tag
+      className={cn(
+        "font-sans font-semibold tracking-tight text-balance",
+        sizeClass,
+        className,
+      )}
+    >
       {children}
     </Tag>
+  );
+}
+
+/** Proof exhibit — a framed, elevated surface for artifacts (demo, screenshots). */
+export function Exhibit({
+  children,
+  label,
+  className,
+  dark = false,
+}: {
+  children: React.ReactNode;
+  label?: string;
+  className?: string;
+  dark?: boolean;
+}) {
+  return (
+    <figure
+      className={cn(
+        "overflow-hidden rounded-xl border [box-shadow:var(--shadow-exhibit)]",
+        dark
+          ? "border-white/10 bg-surface-dark-2"
+          : "border-rule bg-paper-pure",
+        className,
+      )}
+    >
+      {label && (
+        <figcaption
+          className={cn(
+            "text-overline flex items-center gap-2 border-b px-4 py-2.5 font-mono uppercase",
+            dark
+              ? "border-white/10 text-ink-on-dark-500"
+              : "border-rule text-ink-500",
+          )}
+        >
+          <span className="inline-flex gap-1.5">
+            <span className="h-2 w-2 rounded-full bg-accent" />
+            <span className="h-2 w-2 rounded-full bg-rule" />
+            <span className="h-2 w-2 rounded-full bg-rule" />
+          </span>
+          {label}
+        </figcaption>
+      )}
+      {children}
+    </figure>
   );
 }
 
